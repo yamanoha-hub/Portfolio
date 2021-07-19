@@ -1,3 +1,4 @@
+/* ベース */
 body {
   color: #333;
   line-height: 2.0;
@@ -25,7 +26,6 @@ header {
   position: fixed;
   text-align: center;
   z-index: 3;
-
   background-color: #fff;
 }
 .header-nav {
@@ -41,9 +41,6 @@ header {
 .hamburger {
   display: flex;
   align-items: center;
-}
-.nav-btn, .nav-btn span, .menu-content ul {
-  display: inline-block;
 }
 .nav-btn {
   position: relative;
@@ -87,19 +84,19 @@ header {
 .side-ver {
   background-color: #fff;
   position: fixed;
-  top: 60px;
+  top: 60;
   right: 0;
   height: 100vh;
   width: 60px;
 }
 .item {
-  margin-top: 150px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .item li {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 #page-top {
   width: 45px;
@@ -114,6 +111,7 @@ header {
   display: block;
   font-weight: 700;
   font-size: 25px;
+  line-height: 45px;
   color: #fff;
   text-align: center;
 }
@@ -121,19 +119,18 @@ header {
 /* メイン */
 .main-visual {
   background-image: url(../images/fv1.jpg);
-  height: 100vh;
+  height: calc(100vh - 120px);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  /* box-shadow: 0 9px 23px 3px rgb(0 0 0 / 40%); */
   z-index: -1;
 }
-/* アバウト */
+
+/* about me*/
 .about {
   position: relative;
-  /* background-color: grey; */
   background-attachment: fixed;
-  height: 85vh;
+  padding-bottom: 150px;
   z-index: 0;
 }
 .about-content {
@@ -177,12 +174,13 @@ header {
 /* Works */
 /* サイト */
 .works {
-  /* position: fixed; */
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
   background-color: grey;
   background-attachment: fixed;
-  height: 85vh;
   width: 100%;
+  padding-bottom: 300px;
   z-index: 0;
 }
 .site-contents {
@@ -225,8 +223,8 @@ header {
 
 .bg-works {
   position: absolute;
-  bottom: 0;
-  right: 50px;
+  top: 450px;
+  right: 0px;
   color: rgba(221, 222, 255, 0.3);
   font-size: 15rem;
   font-weight: bold;
@@ -237,11 +235,11 @@ header {
 
 /* フォーム */
 .contact {
+  height: calc(100vh - 120px);
   background-image: url(../images/contact.jpg);
   background-position: center;
   object-fit: cover;
   background-size: cover;
-  padding-bottom: 50px;
   position: relative;
 }
 form {
@@ -255,6 +253,8 @@ label {
   font-size: 1.125rem;
   margin-bottom: 10px;
   display: block;
+  line-height: 1;
+  margin: 10px 0;
 }
 input[type="text"],input[type="email"],textarea {
   background: rgba(255, 255, 255, 0.5);
@@ -293,7 +293,6 @@ input[type="submit"] {
   line-height: 1;
   z-index: 0;
 }
-
 
 footer {
   position: fixed;
