@@ -29,12 +29,14 @@
         </a>
       </div>
       <div class="menu-content">
-        <ul>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="menu-content-inner">
+          <ul>
+            <li class="transition10 delay03"><a id="about" href="#about-id">About Me</a></li>
+            <li class="transition10 delay05"><a id="works" href="#works-id">Works</a></li>
+            <li class="transition10 delay07"><a id="skills" href="#">Skills</a></li>
+            <li class="transition10 delay09"><a id="contact" href="#contact-id">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -52,10 +54,10 @@
   </div>
   <main>
     <div class="main-wrapper">
-      <section class="main-visual">
-      </section>
-      <section class="about">
-        <h2 class="section-title">About Me</h2>
+      <section class="main-visual"></section>
+      <section class="about" id="about-id">
+        <div class="bg-title">About Me</div>
+        <h2 class="section-title">私について</h2>
         <div class="about-content">
           <div class="about-main">
             <div class="about-img">
@@ -65,12 +67,41 @@
           </div>
           <div class="profile">
             <h3>Profile</h3>
-            <p>沖縄県出身、名護市在住。県の会計年度職員として働きながらWeb制作の魅力に取り憑かれ、コーディングを中心に猛勉強開始。<br>また、ダンスのインストラクター経験や地域行事や祭りでのshow、直近ではチームshow優勝など異色の経歴を持つ努力家。</p>
+            <p>沖縄県出身、名護市在住。沖縄県の会計年度職員の事務員として働いておりました。Web制作の魅力に惹かれ、コーディングを中心に勉強開始。Progateから始まりUdemyやAdobeチュートリアル、書籍を中心に学び邁進し続けています。</p><br>
+            <p>また、ダンスのインストラクター経験や地域行事の参加、直近ではチームshow優勝など異色の経歴をもつ努力家。ダンスを通じて多くのクリエイトする人たちと関わり、価値を共有し合いながら提供し続けている。</p>
           </div>
         </div>
-        <div class="bg-about">About Me</div>
+        <div class="vision">
+          <h2>Vision</h2>
+          <div class="vision-text">
+            <h3>意気込み</h3>
+            <p>Webコーダー志望。適切なマークアップや伝わるようなデザインを目標に日々独学で学習してきました。<br>入社後は、課題解決や目標達成できるよう自ら提案し、お客様がイメージするゴールを再現し、責任持ってやり遂げます。<br>
+            </p>
+          </div>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <div class="skill-content">
+            <div class="cord coding">
+              <h4>HTML,CSS,<br>JavaScript(jQuery)</h4>
+              <i class="far fa-file-code fa-6x"></i>
+              <p>jqueryを使ってアニメーションの実装が可能です。レスポンシブ可にも対応                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            <div class="cord design">
+              <h4>Photoshop,<br>Illustrator</h4>
+              <i class="fas fa-pen-fancy fa-6x"></i>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit excepturi itaque iusto. Rerum, fugit nesciunt! Eum, molestiae quos neque sequi sint assumenda magni aperiam, doloribus corrupti modi, maxime labore odit!</p>
+            </div>
+            <div class="cord">
+                  <h4></h4>
+                  <i></i>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, harum? Ea nemo dignissimos quam cumque eligendi debitis aliquam numquam sunt, animi, dolorum temporibus ullam vitae sapiente. Ut alias provident nobis?</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="plan"></div> -->
       </section>
-      <section class="works">
+      <!-- <section class="works" id="works-id">
         <h2 class="section-title">Works</h2>
         <div class="site-contents">
           <div class="site1">
@@ -103,12 +134,12 @@
           <img src="images/fv1.jpg" alt="">
           <img src="images/fv1.jpg" alt="">
         </div>
-        <div class="bg-works">Works</div>
-      </section>
-      <section class="contact">
+        <div class="bg-works"></div>
+      </section> -->
+      <!-- <section class="contact" id="contact-id">
         <h2 class="section-title">Contact</h2>
         <form action="#"> 
-          <div class="form-content">
+          <div class="form-contents">
             <div>
               <label for="name">お名前<span>必須</span></label>
               <input type="text" id="name" name="your-name">
@@ -125,11 +156,11 @@
               <label for="message">メッセージ</label>
               <textarea name="your-message" id="message" cols="30" rows="10"></textarea>
             </div>
-            <input type="submit" class="btn" value="送信">
           </div>
+          <input type="submit" class="btn" value="送信">
         </form>
-        <div class="bg-contact">Contact</div>
-      </section>
+        <div class="bg-contact"></div>
+      </section> -->
     </div>
   </main>
   <footer>

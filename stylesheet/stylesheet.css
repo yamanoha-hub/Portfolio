@@ -11,12 +11,27 @@ img {
   width: 100%;
   object-fit: cover;
 }
+.bg-title {
+  text-align: center;
+  color: rgba(221, 222, 255, 0.3);
+  font-size: 6rem;
+  font-weight: bold;
+  /* position: relative; */
+}
 .section-title {
   text-align: center;
-  font-size: 64px;
-  padding-top: 0px;
+  font-size: 2rem;
+  padding: 40px;
   line-height: 1.5;
+  margin-top: -130px;
 }
+
+/* アニメーション */
+.transition10 {transition:all 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);}
+.delay03 {transition-delay: .3s;}
+.delay05 {transition-delay: .5s;}
+.delay07 {transition-delay: .7s;}
+.delay09 {transition-delay: .9s;}
 
 /* ヘッダー */
 header {
@@ -32,9 +47,8 @@ header {
   line-height: 60px;
 }
 .menu {
-  height: 100vh;
+  height: calc(100vh - 120px);
   position: relative;
-  bottom: 60px;
   width: 60px;
   display: flex;
 }
@@ -63,34 +77,43 @@ header {
   bottom: 0;
 }
 .menu-content {
+  display: none;
   position: absolute;
   width: 400px;
-  height: 100vh;
   background-color: rgb(255, 255, 255);
-  display: none;
-  align-items: center;
-  justify-content: center;
   z-index: -1;
 }
-.menu-slide {
+.menu-content-inner ul { 
+  height: calc(100vh - 120px);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
+.open-menu {
+  display: block;
+}
 .menu-content ul li {
   margin: 20px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.menu-content.on ul li {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /* サイドバー */
 .side-ver {
   background-color: #fff;
+  height: calc(100vh - 120px);
   position: fixed;
-  top: 60;
+  top: 60px;
   right: 0;
-  height: 100vh;
   width: 60px;
 }
 .item {
-  margin-top: 80px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,11 +122,11 @@ header {
   margin: 15px 0;
 }
 #page-top {
-  width: 45px;
-  height: 45px;
-  position: fixed;
+  width: 50px;
+  height: 50px;
+  position: absolute;
   right: 5px;
-  bottom: 70px;
+  bottom: 30px;
   background: #333;
   border-radius: 50%;
 }
@@ -111,7 +134,7 @@ header {
   display: block;
   font-weight: 700;
   font-size: 25px;
-  line-height: 45px;
+  line-height: 50px;
   color: #fff;
   text-align: center;
 }
@@ -122,16 +145,14 @@ header {
   height: calc(100vh - 120px);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  z-index: -1;
+  background-position: center;
+  box-shadow: 0px 10px 10px -10px #333;
 }
 
 /* about me*/
 .about {
-  position: relative;
+  /* height: calc(100vh - 120px); */
   background-attachment: fixed;
-  padding-bottom: 150px;
-  z-index: 0;
 }
 .about-content {
   margin-top: 50px;
@@ -148,7 +169,7 @@ header {
   border-radius: 50%;
 }
 .about-img p {
-  font-size: 36px;
+  font-size: 2rem;
 }
 .profile {
   width: 50%;
@@ -160,16 +181,70 @@ header {
   margin-bottom: 10px;
 }
 
-.bg-about {
-  position: absolute;
-  bottom: 0;
-  left: 50px;
-  color: rgba(221, 222, 255, 0.3);
-  font-size: 13vw;
-  font-weight: bold;
-  line-height: 1;
-  z-index: -1;
+/* vision */
+.vision {
+  background-image: url(../images/vision.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 600px;
 }
+.vision h2 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+}
+.vision-text {
+  text-align: center;
+  background-color: #fff;
+  width: 500px;
+  height: 350px;
+  border-radius: 40px;
+  margin: 50px auto;
+  padding: 0 30px;
+}
+.vision-text h3 {
+  font-size: 1.85rem;
+  padding: 20px;
+}
+.vision-text p {
+  font-size: 1.25rem;
+}
+
+/* スキル */
+.skills {
+  background-image: url(../images/code.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 50px;
+}
+.skills h3 {
+  text-align: center;
+  color: #fff;
+  padding: 50px;
+  font-size: 2rem;
+}
+.skill-content {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+}
+.cord {
+  /* height: 500px; */
+  background-color: #fff;
+  margin: 0 20px;
+  width: 80%;
+  border-radius: 20px;
+  padding: 20px;
+}
+.cord i {
+  margin: 30px auto 50px;
+}
+
+
+
+
 
 /* Works */
 /* サイト */
@@ -221,17 +296,17 @@ header {
   margin: 10px;
 }
 
-.bg-works {
+.bg-works::after {
+  content: "Works";
   position: absolute;
-  top: 450px;
+  top: 500px;
   right: 0px;
   color: rgba(221, 222, 255, 0.3);
-  font-size: 15rem;
+  font-size: 13rem;
   font-weight: bold;
   line-height: 1;
   z-index: -1;
 }
-
 
 /* フォーム */
 .contact {
@@ -283,12 +358,14 @@ input[type="submit"] {
   margin-top: 10px;
   border-radius: 30px;
 }
-.bg-contact {
+.bg-contact::after {
+  content: "Content";
   position: absolute;
+  /* top: 0; */
   bottom: 0;
-  left: 50px;
+  left: 0;
   color: rgba(233, 234, 255, 0.3);
-  font-size: 15rem;
+  font-size: 13vw;
   font-weight: bold;
   line-height: 1;
   z-index: 0;

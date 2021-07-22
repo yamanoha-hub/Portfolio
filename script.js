@@ -1,24 +1,30 @@
 $(function(){
 
-  $('.nav-btn').on('click', function() {
-    $(this).toggleClass('active');
-    $('.open-menu').toggleClass('open');
+  //ページ内リンクスムーススクロール
+  $('.menu-content-inner a[href^="#"]').on('click', function () {
+    var href = $(this).attr("href"); //href属性の取得
+    var target = $(href == "#" || href == "" ? 'html' : href);  //移動先のhref #,空ならtop
+    var position = target.offset().top; // 移動先の場所を決める
+    $("html, body").animate({scrollTop: position}, 400, "swing");
     return false;
   });
 
   // メニューホバー
   $('.menu').hover(
-    function() {
-      $('.menu-content').addClass('menu-slide');
+    function() {  //カーソル置いたら
+      $('.menu-content').fadeIn();
+      $('.menu-content').addClass('on');
     },
-    function() {
-      $('.menu-content').removeClass('menu-slide');
+    function() {  //外したら
+      $('.menu-content').fadeOut();
+      $('.menu-content').removeClass('on');
     }
-  )
+  );
   
   // ページトップ
   $('#page-top').click(function() {
-    $("html, body").animate({scrollTop:0}, 500);
+    $("html, body").animate({scrollTop:0}, 500);  //0.5sでトップに戻る
     return false;
   });
+
 });
