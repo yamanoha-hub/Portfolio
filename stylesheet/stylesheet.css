@@ -32,6 +32,14 @@ img {
   color: #fff;
   text-align: center;
 }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: rgb(137, 208, 255);
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px 2px #858585;
+}
 .sub-title::first-letter {
   color: rgb(137, 208, 255);
 }
@@ -42,7 +50,6 @@ img {
 .delay05 {transition-delay: .5s;}
 .delay07 {transition-delay: .7s;}
 .delay09 {transition-delay: .9s;}
-
 
 /* ヘッダー */
 header {
@@ -56,6 +63,13 @@ header {
 }
 .header-nav {
   line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav img {
+  width: 40px;
+  padding: 0 10px;
 }
 .menu {
   height: calc(100vh - 120px);
@@ -149,7 +163,10 @@ header {
   color: #fff;
   text-align: center;
 }
-
+#page-top a:hover {
+  color: rgb(137, 208, 255);
+  opacity: 1;
+}
 /* メイン */
 .main-visual {
   background-image: url(../images/fv1.jpg);
@@ -162,7 +179,8 @@ header {
 
 /* about me*/
 .about-content {
-  height: 700px;
+  height: 100%;
+  padding-bottom: 100px;
 }
 .about-area {
   margin-top: 50px;
@@ -183,7 +201,7 @@ header {
 }
 .profile {
   width: 50%;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 .profile h3 {
   font-size: 26px;
@@ -236,8 +254,12 @@ header {
   border-radius: 20px;
 }
 .cord i {
-  margin: 30px 0 50px;
+  margin: 30px 10px 50px;
 }
+.streng {
+  margin-top: 20px;
+}
+
 
 /* Works */
 .works {
@@ -246,8 +268,6 @@ header {
   position: relative;
   /* position: -webkit-sticky; */
   /* position: sticky; */
-  /* top: 60px; */
-  /* background-color: grey; */
   /* background-attachment: fixed; */
 }
 .site-contents {
@@ -259,7 +279,7 @@ header {
   width: 250px;
   display: flex;
   flex-direction: column;
-  margin: 20px 10px;
+  margin: 20px 15px;
   line-height: 1.7;
 }
 .work-img {
@@ -267,7 +287,7 @@ header {
   height: 150px;
 }
 
-/* サイトモーダル */
+/* workモーダル */
 .modal-wrapper {
   display: none;
   position: fixed;
@@ -298,13 +318,17 @@ header {
 .site1-modal img,
 .site2-modal img,
 .site3-modal img {
-  width: 40%;
+  width: 50%;
   margin: 10px;
 }
-.site1-modal {
+.site2-modal {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-text {
+  width: 400px;
+  margin: 20px;
 }
 
 
@@ -367,7 +391,7 @@ input[type="submit"] {
   cursor: pointer;
   line-height: 1;
 }
-.btn {
+.contact-btn {
   padding: 20px 100px;
   margin-top: 10px;
   border-radius: 30px;
@@ -402,11 +426,10 @@ footer {
     margin-bottom: 0;
   }
   .about-content {
-    height: 900px;
+    padding-right: 20px;
   }
   .about-area {
     flex-direction: column;
-    justify-content: space-around;
     margin-top: 20px;
   }
   .about-img img {
@@ -418,9 +441,10 @@ footer {
     margin-top: 20px;
   }
   .profile h3 {
-    font-size: 1.85rem;
+    font-size: 1.5rem;
   }
   .profile p {
+    font-size: 0.8rem;
     line-height: 1.8;
   }
 
@@ -431,6 +455,7 @@ footer {
   .vision-text {
     width: 80%;
     padding: 10px 20px;
+    margin-top: 30px;
   }
   .vision-text h3 {
     font-size: 1.5rem;
@@ -456,10 +481,9 @@ footer {
   .cord i {
     margin: 10px;
   }
-    
-  
-  
-
+  .contact {
+    height: 650px;
+  }
 
 }
 

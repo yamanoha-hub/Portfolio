@@ -31,7 +31,6 @@ $(function(){
   $('.work-site2').click(function() {  //work-site2クリックしたら
     $('.modal-wrapper').addClass('modal-open');
   });
-
   $('.close-modal').click(function() {
     $('.modal-wrapper').removeClass('modal-open');
   });

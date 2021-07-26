@@ -10,6 +10,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- IE対応 stickyfill -->
   <!-- <script src="stickyfill.min.js"></script> -->
+  <link rel="icon" href="images/logo-img.png">
+
 
   <title>Noha Portfolio</title>
   <link rel="stylesheet" href="stylesheet/reset.css">
@@ -18,6 +20,7 @@
 <body>
   <header>
     <div class="header-nav">
+      <img src="images/logo-img.png">
       <h1 class="logo">Noha Portfolio</h1>
     </div>
     <div class="menu">
@@ -33,7 +36,7 @@
           <ul>
             <li class="transition10 delay03"><a id="about" href="#about-id">About Me</a></li>
             <li class="transition10 delay05"><a id="works" href="#works-id">Works</a></li>
-            <li class="transition10 delay07"><a id="skills" href="#">Skills</a></li>
+            <li class="transition10 delay07"><a id="skills" href="skills-id">Skills</a></li>
             <li class="transition10 delay09"><a id="contact" href="#contact-id">Contact</a></li>
           </ul>
         </div>
@@ -79,23 +82,29 @@
             <p>入社後は、課題解決や目標達成できるよう自ら提案することができ、お客様がイメージするゴールを再現しつつ、お互い満足のいく作品を目指し責任持ってやり遂げます。</p>
           </div>
         </div>
-        <div class="skills">
+        <div class="skills" id="">
           <h3 class="sub-title">Skills</h3>
           <div class="skill-content">
             <div class="cord coding">
               <h4>HTML,CSS,<br>JavaScript(jQuery)</h4>
               <i class="far fa-file-code fa-6x"></i>
-              <p> jqueryを使ってアニメーションの実装が可能です。レスポンシブ化にも対応。</p>
-              </div>
+              <p>お問い合わせフォーム、jqueryを使ってアニメーションの実装。レスポンシブ化にも対応。</p>
+            </div>
             <div class="cord design">
               <h4>Photoshop,<br>Illustrator</h4>
               <i class="fas fa-pen-fancy fa-6x"></i>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit excepturi itaque iusto. Rerum, fugit nesciunt! Eum, molestiae quos neque sequi sint assumenda magni aperiam, doloribus corrupti modi, maxime labore odit!</p>
+              <p>adobeチュートリアル動画やデザインのドリルでトレースで学習を行い基本的な使い方は使用できます。</p>
             </div>
-            <div class="cord">
-                  <h4></h4>
-                  <i></i>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, harum? Ea nemo dignissimos quam cumque eligendi debitis aliquam numquam sunt, animi, dolorum temporibus ullam vitae sapiente. Ut alias provident nobis?</p>
+            <div class="cord git">
+              <h4>git/github,<br></h4>
+              <i class="fab fa-git fa-2x"></i>
+              <p>git学習後に今まで学習してきたサイトを載せました。</p>
+              <h4 class="streng">※強化中</h4>
+              <ul>
+                <li>WordPress</li>
+                <li>Photoshop,Illustrator</li>
+                <li>JavaScript</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -104,8 +113,8 @@
         <div class="bg-title">Works</div>
         <h2 class="section-title">Works</h2>
         <div class="site-contents">
-          <div class="site3">
-            <a href="#">
+          <div class="work-site3">
+            <a href="site3">
               <img class="work-img" src="images/fv1.jpg" alt="">
               <h3>模擬サイト3</h3>
               <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -114,15 +123,15 @@
           <div class="work-site2">
             <a class="site2">
               <img class="work-img" src="images/site2.jpg" alt=" fitness-img">
-              <h3>フィットネス系のサイト(架空)</h3>
-              <p>解答コードありの教材を自分なりにカスタマイズしました。</p>
+              <h3>フィットネス系のサイト</h3>
+              <p>解答コードありの教材を自分なりにカスタマイズ。</p>
             </a>
           </div>
-          <div class="site1">
-            <a href="#">
+          <div class="work-site1">
+            <a href="site1">
               <img class="work-img" src="images/fv1.jpg" alt="">
-              <h3>コーポレートサイト(架空)</h3>
-              <p>解答コードありの教材を自分なりにカスタマイズしました。</p>
+              <h3>コーポレートサイト</h3>
+              <p>解答コードありの教材を自分なりにカスタマイズ。</p>
             </a>
           </div>
         </div>
@@ -138,20 +147,36 @@
             <i class="fa fa-times fa-2x"></i>
           </div>
           <img src="images/code.jpg" alt="work1">
-          <h2>フィットネス系サイト(架空)</h2>
-          <p></p>
+          <div class="site1-text">
+            <h2>コーポレートサイト(架空)</h2>
+            <p>よくありそうな配置を中心に行うコーディング教材を、レスポンシブ化、動きをつけたりとアレンジを行いました。</p><br>
+            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら),Googleマップ,font awesome</p>
+            <a class="btn" href="＃">コードを確認する</a>
+          </div>
         </div>
         <div class="site2-modal">
           <div class="close-modal">
             <i class="fa fa-times fa-2x"></i>
           </div>
-          <img src="images/code.jpg" alt="work1">
+          <img src="images/site2.jpg" alt="work1">
+          <div class="modal-text">
+            <h2>フィットネス系サイト(架空)</h2>
+            <p>レスポンシブに対応するサイトを中心に行うコーディング教材を、ページ数4枚追加、動きをつけたりとアレンジを行いました。</p><br>
+            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら全体にメニュー),ページトップ,BxSlider(プラグイン)でクリックしたらスライド,スムーズスクロール,font awesome</p>
+            <a class="btn" href="＃">コードを確認する</a>
+          </div>
         </div>
         <div class="site3-modal">
           <div class="close-modal">
             <i class="fa fa-times fa-2x"></i>
           </div>
-          <img src="images/code.jpg" alt="work1">
+          <img src="images/code.jpg" alt="work3">
+          <div class="site3-text">
+            <h2>こサイト(架空)</h2>
+            <p>サイトを中心に行うコーディング教材を、ページ数4枚追加、動きをつけたりとアレンジを行いました。</p><br>
+            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら),BxSlider(プラグイン),font awesome</p>
+            <a class="btn" href="＃">コードを確認する</a>
+          </div>
         </div>
       </div>
       <section class="contact" id="contact-id">
@@ -176,7 +201,7 @@
               <textarea name="your-message" id="message" cols="30" rows="10"></textarea>
             </div>
           </div>
-          <input type="submit" class="btn" value="送信">
+          <input type="submit" class="contact-btn" value="送信">
         </form>
       </section>
     </div>
