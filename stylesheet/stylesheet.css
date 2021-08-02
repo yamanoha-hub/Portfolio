@@ -266,9 +266,6 @@ header {
   height: 100%;
   padding-bottom: 50px;
   position: relative;
-  /* position: -webkit-sticky; */
-  /* position: sticky; */
-  /* background-attachment: fixed; */
 }
 .site-contents {
   display: flex;
@@ -309,8 +306,7 @@ header {
 }
 .site1-modal, .site2-modal, .site3-modal {
   display: none;
-  /* height: 500px; */
-  height: 70%;
+  min-height: 70%;
   background-color: rgba(218, 218, 218, 0.8);
   border-radius: 30px;
   margin: 50px;
@@ -323,17 +319,13 @@ header {
 }
 .site2-modal {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .modal-text {
   width: 400px;
   margin: 20px;
 }
-
-
-
-
 
 /* デザイン */
 .design-content {
@@ -464,7 +456,23 @@ footer {
   .vision-text p {
     font-size: 1rem;
   }
-  
+
+  /* モーダル */
+  .modal-text h2 {
+    font-size: 1em;
+  }
+  .modal-text p {
+    font-size: .8em;
+  }
+  .modal-wrapper .btn {
+    font-size: .5em;
+  }
+  .site2-modal {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
   /* スキル */
   .skills {
     padding-bottom: 50px;
@@ -484,15 +492,5 @@ footer {
   .contact {
     height: 650px;
   }
-
 }
-
-
-
-
-
-
-
-
-
 

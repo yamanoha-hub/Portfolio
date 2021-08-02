@@ -34,4 +34,8 @@ $(function(){
   $('.close-modal').click(function() {
     $('.modal-wrapper').removeClass('modal-open');
   });
+
+
+
+  
 });
