@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- font Awesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
   <!-- ファビコン -->
   <link rel="icon" href="images/logo-img.png">
+  <!-- タイトル -->
   <title>Noha Portfolio</title>
+  <!-- css読み込み -->
   <link rel="stylesheet" href="stylesheet/reset.css">
   <link rel="stylesheet" href="stylesheet/stylesheet.css">
   <!-- jquery -->
@@ -112,22 +113,22 @@
         <h2 class="section-title">Works</h2>
         <div class="site-contents">
           <div class="work-site3">
-            <a href="site3">
-              <img class="work-img" src="images/fv1.jpg" alt="">
+            <a href="#site3">
+              <img class="work-img" src="images/fv1.jpg" alt="site3-img">
               <h3>模擬サイト3</h3>
               <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
             </a>
           </div>
           <div class="work-site2">
-            <a class="site2">
+            <a class="#site2">
               <img class="work-img" src="images/site2.jpg" alt=" fitness-img">
               <h3>フィットネス系のサイト</h3>
               <p>解答コードありの教材を自分なりにカスタマイズ。</p>
             </a>
           </div>
           <div class="work-site1">
-            <a href="site1">
-              <img class="work-img" src="images/site1.png" alt="">
+            <a href="#site1">
+              <img class="work-img" src="images/site1.png" alt="site1-img">
               <h3>コーポレートサイト</h3>
               <p>解答コードありの教材を自分なりにカスタマイズ。</p>
             </a>
@@ -140,40 +141,40 @@
         </div>
       </section>
       <div class="modal-wrapper">
-        <div class="site1-modal">
+        <div class="site3-modal" id="site3">
           <div class="close-modal">
             <i class="fa fa-times fa-2x"></i>
           </div>
-          <img src="images/code.jpg" alt="work1">
-          <div class="site1-text">
-            <h2>コーポレートサイト(架空)</h2>
-            <p>よくありそうな配置を中心に行うコーディング教材を、レスポンシブ化、動きをつけたりとアレンジを行いました。</p><br>
-            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら),Googleマップ,font awesome</p>
-            <a class="btn" href="＃">コードを確認する</a>
+          <img src="images/code.jpg" alt="work3-img">
+          <div class="modal-text">
+            <h2>こサイト(架空)</h2>
+            <p>サイトを中心に行うコーディング教材を、ページ数4枚追加、動きをつけたりとアレンジを行いました。</p><br>
+            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら),BxSlider(プラグイン),font awesome</p>
+            <a class="btn" href="#">コードを確認する</a>
           </div>
         </div>
-        <div class="site2-modal">
+        <div class="site2-modal" id="site2">
           <div class="close-modal">
             <i class="fa fa-times fa-2x"></i>
           </div>
-          <img src="images/site2.jpg" alt="work1">
+          <img src="images/site2.jpg" alt="site2-img">
           <div class="modal-text">
             <h2>フィットネス系サイト(架空)</h2>
             <p>レスポンシブに対応するサイトを中心に行うコーディング教材を、ページ数4枚追加、動きをつけたりとアレンジを行いました。</p><br>
             <p>レスポンシブ,ハンバーガーメニュー(クリックしたら全体にメニュー),ページトップ,BxSlider(プラグイン)でクリックしたらスライド,スムーズスクロール,font awesome</p>
-            <a class="btn" href="＃">コードを確認する</a>
+            <a class="btn" href="#">コードを確認する</a>
           </div>
         </div>
-        <div class="site3-modal">
+        <div class="site1-modal" id="site1">
           <div class="close-modal">
             <i class="fa fa-times fa-2x"></i>
           </div>
-          <img src="images/code.jpg" alt="work3">
-          <div class="site3-text">
-            <h2>こサイト(架空)</h2>
-            <p>サイトを中心に行うコーディング教材を、ページ数4枚追加、動きをつけたりとアレンジを行いました。</p><br>
-            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら),BxSlider(プラグイン),font awesome</p>
-            <a class="btn" href="＃">コードを確認する</a>
+          <img src="images/site1.png" alt="site1-img">
+          <div class="modal-text">
+            <h2>コーポレートサイト(架空)</h2>
+            <p>よくありそうな配置を中心に行うコーディング教材を、レスポンシブ化、動きをつけたりとアレンジを行いました。</p><br>
+            <p>レスポンシブ,ハンバーガーメニュー(クリックしたら),Googleマップ,font awesome</p>
+            <a class="btn" href="#">コードを確認する</a>
           </div>
         </div>
       </div>
@@ -182,24 +183,28 @@
         <h2 class="section-title">Contact</h2>
         <form action="#">
           <div class="form-contents">
-            <div>
+            <div id="name-area">
               <label for="name">お名前<span>必須</span></label>
+              <p class="alert">Alert : 未解答</p>
               <input type="text" id="name" name="your-name">
             </div>
-            <div>
+            <div id="furigana-area">
               <label for="name">フリガナ</label>
+              <p class="alert">Alert : 未解答</p>
               <input type="text" id="huri" name="your-huri">
             </div>
-            <div>
+            <div id="mail-area">
               <label for="name">メールアドレス</label>
+              <p class="alert">Alert : 未解答</p>
               <input type="email" id="email" name="your-email">
             </div>
-            <div>
+            <div id="message-area">
               <label for="message">メッセージ</label>
+              <p class="alert">Alert : 未解答</p>
               <textarea name="your-message" id="message" cols="30" rows="10"></textarea>
             </div>
           </div>
-          <input type="submit" class="contact-btn" value="送信">
+          <input type="submit" class="contact-btn" value="送信"  id="submitBtn">
         </form>
       </section>
     </div>
