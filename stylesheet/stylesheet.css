@@ -295,9 +295,6 @@ header {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
-.modal-open {
-  display: block;
-}
 .close-modal {
   position: absolute;
   top: 70px;
@@ -305,22 +302,20 @@ header {
   cursor: pointer;
 }
 .site1-modal, .site2-modal, .site3-modal {
-  display: none;
   min-height: 70%;
   background-color: rgba(218, 218, 218, 0.8);
   border-radius: 30px;
   margin: 50px;
-}
-.site1-modal img,
-.site2-modal img,
-.site3-modal img {
-  width: 50%;
-  margin: 10px;
-}
-.site2-modal {
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
+}
+.modal-open {
+  display: flex;
+}
+.modal-wrapper img {
+  width: 50%;
+  margin: 10px;
 }
 .modal-text {
   width: 400px;
@@ -346,7 +341,6 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* position: relative; */
 }
 form {
   background-color: rgb(255, 255, 255, 0.6);
