@@ -301,7 +301,9 @@ header {
   right: 80px;
   cursor: pointer;
 }
-.site1-modal, .site2-modal, .site3-modal {
+.site1-modal,
+.site2-modal,
+.site3-modal {
   min-height: 70%;
   background-color: rgba(218, 218, 218, 0.8);
   border-radius: 30px;
@@ -452,6 +454,10 @@ footer {
   }
 
   /* モーダル */
+  .modal-text {
+    padding: 0 10px;
+    margin: 0 10px;
+  }
   .modal-text h2 {
     font-size: 1em;
   }
@@ -461,7 +467,9 @@ footer {
   .modal-wrapper .btn {
     font-size: .5em;
   }
-  .site2-modal {
+  .site1-modal,
+  .site2-modal,
+  .site3-modal {
     flex-direction: column;
     text-align: center;
     justify-content: center;
