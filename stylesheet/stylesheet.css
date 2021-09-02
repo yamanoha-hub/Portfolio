@@ -17,6 +17,7 @@ img {
   font-size: 6rem;
   font-weight: bold;
   line-height: 1;
+  /* margin-top: 20px; */
 }
 .section-title {
   text-align: center;
@@ -164,7 +165,6 @@ header {
   text-align: center;
 }
 #page-top a:hover {
-  color: rgb(137, 208, 255);
   opacity: 1;
 }
 /* メイン */
@@ -246,18 +246,18 @@ header {
   text-align: center;
   padding: 20px;
 }
-.cord {
+.card {
   width: 80%;
   padding: 20px;
   margin: 0 20px;
   background-color: #fff;
   border-radius: 20px;
 }
-.cord i {
-  margin: 30px 10px 50px;
+.card i {
+  margin: 30px 10px;
 }
-.streng {
-  margin-top: 20px;
+.strengthen {
+  margin-top: 10px;
 }
 
 
