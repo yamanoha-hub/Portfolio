@@ -44,6 +44,11 @@ img {
 .sub-title::first-letter {
   color: rgb(137, 208, 255);
 }
+strong {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: solid 2px #000;
+}
 
 /* アニメーション */
 .transition10 {transition:all 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);}
@@ -169,7 +174,7 @@ header {
 }
 /* メイン */
 .main-visual {
-  background-image: url(../images/fv1.jpg);
+  background-image: url(../images/fv3.jpg);
   height: calc(100vh - 120px);
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,16 +192,16 @@ header {
   display: flex;
   justify-content: space-around;
 }
-.about-img {
+.about-left {
   text-align: center;
   margin: 0 10px;
 }
-.about-img img {
+.about-left img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
 }
-.about-img p {
+.about-left p {
   font-size: 2rem;
 }
 .profile {
@@ -226,11 +231,8 @@ header {
   margin: 0 auto;
 }
 .vision-text h3 {
-  font-size: 1.85rem;
+  font-size: 26px;
   padding-bottom: 30px;
-}
-.vision-text p {
-  font-size: 1.25rem;
 }
 
 /* スキル */
@@ -412,6 +414,12 @@ footer {
     font-size: 2rem;
     margin-bottom: 0;
   }
+  .main-wrapper {
+    padding: 60px 60px 60px 0;
+  }
+  .menu {
+    display: none;
+  }
   .about-content {
     padding-right: 20px;
   }
@@ -453,9 +461,21 @@ footer {
   }
 
   /* モーダル */
+  .site1-modal,
+  .site2-modal,
+  .site3-modal {
+    min-height: 80%;
+    margin: 50px 20px;
+    padding: 10px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .modal-wrapper img {
+    width: 300px;
+  }
   .modal-text {
-    padding: 0 10px;
-    margin: 0 10px;
+    width: 400px;
+    margin: 0px;
   }
   .modal-text h2 {
     font-size: 1em;
@@ -466,13 +486,6 @@ footer {
   .modal-wrapper .btn {
     font-size: .5em;
   }
-  .site1-modal,
-  .site2-modal,
-  .site3-modal {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
 
   /* スキル */
   .skills {
@@ -482,7 +495,7 @@ footer {
     flex-direction: column;
     padding: 10px;
   }
-  .cord {
+  .card {
     width: 90%;
     padding: 10px;
     margin: 10px auto;

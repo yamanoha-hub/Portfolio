@@ -1,7 +1,7 @@
 $(function(){
 
   // メニューホバー
-  $('.menu').hover(
+  $('.menu').hover (
     function() {  //カーソル置いたら
       $('.menu-content').fadeIn();
       $('.menu-content').addClass('on');
