@@ -33,11 +33,9 @@
       <div class="menu-content">
         <div class="menu-content-inner">
           <ul>
-            <li class="transition10 delay03">
-              <a id="about" href="#about-id">About Me</a>
-            </li>
-            <li class="transition10 delay05"><a id="works" href="#works-id">Works</a></li>
-            <li class="transition10 delay07"><a id="skills" href="skills-id">Skills</a></li>
+            <li class="transition10 delay03"><a id="about" href="#about-id">About Me</a></li>
+            <li class="transition10 delay05"><a id="skills" href="#skills-id">Skills</a></li>
+            <li class="transition10 delay07"><a id="works" href="#works-id">Works</a></li>
             <li class="transition10 delay09"><a id="contact" href="#contact-id">Contact</a></li>
           </ul>
         </div>
@@ -84,7 +82,7 @@
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills-id">
       <div class="wrapper">
         <h2 class="section-title">できること</h2>
         <div class="skill-content">
@@ -114,38 +112,44 @@
         </div>
       </div>
     </section>
-    <section class="works" id="works-id">
+    <section class="works sticky" id="works-id">
       <div class="wrapper">
         <div class="sticky">
           <h2 class="section-title">Works</h2>
           <div class="site-contents">
+            <div class="work-site6">
+              <a href="#site6">
+                <img src="images/site05.png" alt="">
+              </a>
+            </div>
+            <div class="work-site5">
+              <a href="#site5">
+                <img src="images/portfolio.png" alt="">
+              </a>
+            </div>
+            <div class="work-site4">
+              <a href="#site4">
+                <img src="images/site04.png" alt="">
+              </a>
+            </div>
             <div class="work-site3">
               <a href="#site3">
-                <img class="work-img" src="images/work3.png" alt="site3-img">
-                <h3>ポートフォリオサイト</h3>
-                <p>コーディング、ロゴ、デザイン等を全て自分でし作成しました。</p>
+                <img src="images/site03.png" alt="自作サイト">
               </a>
             </div>
             <div class="work-site2">
               <a class="#site2">
-                <img class="work-img" src="images/site2.jpg" alt=" fitness-img">
-                <h3>フィットネス系のサイト</h3>
-                <p>解答コードありの教材を自分なりにカスタマイズ。</p>
+                <img src="images/site02.png" alt="フィットネス系サイト">
               </a>
             </div>
             <div class="work-site1">
               <a href="#site1">
-                <img class="work-img" src="images/site1.png" alt="site1-img">
-                <h3>コーポレートサイト</h3>
-                <p>解答コードありの教材を自分なりにカスタマイズ。</p>
+                <img src="images/site01.png" alt="">
               </a>
             </div>
           </div>
-          <div class="design-contents">
-            <h3 class="sub-title">Design</h3>
-            <div class="design">
-              <p>noteにデザインのドリルの感想や進捗を載せてあります。</p>
-            </div>
+          <div class="view">
+            <a href="works.html">MORE</a>
           </div>
         </div>
       </div>
@@ -188,24 +192,25 @@
         </div>
       </div>
     </div>
-    <section class="contact" id="contact-id">
-      <h2 class="section-title">Contact</h2>
-      <form action="#">
-        <div class="form-contents">
-          <div id="name-area">
-            <label for="name">お名前<span>必須</span></label>
-            <p class="alert">Alert : 未解答</p>
-            <input type="text" id="name" name="your-name">
-          </div>
-          <div id="furigana-area">
-            <label for="name">フリガナ</label>
-            <p class="alert">Alert : 未解答</p>
-            <input type="text" id="huri" name="your-huri">
-          </div>
-          <div id="mail-area">
-            <label for="name">メールアドレス</label>
-            <p class="alert">Alert : 未解答</p>
-            <input type="email" id="email" name="your-email">
+    <section class="contact sticky" id="contact-id">
+      <div class="wrapper">
+        <h2 class="section-title">Contact</h2>
+        <form action="#">
+          <div class="form-contents">
+            <div id="name-area">
+              <label for="name">お名前<span>必須</span></label>
+              <p class="alert">Alert : 未解答</p>
+              <input type="text" id="name" name="your-name">
+            </div>
+            <div id="furigana-area">
+              <label for="name">フリガナ</label>
+              <p class="alert">Alert : 未解答</p>
+              <input type="text" id="huri" name="your-huri">
+            </div>
+            <div id="mail-area">
+              <label for="name">メールアドレス</label>
+              <p class="alert">Alert : 未解答</p>
+              <input type="email" id="email" name="your-email">
           </div>
           <div id="message-area">
             <label for="message">メッセージ</label>
@@ -214,7 +219,8 @@
           </div>
         </div>
         <input type="submit" class="contact-btn" value="送信"  id="submitBtn">
-      </form>
+        </form>
+      </div>
     </section>
   </main>
   <footer>

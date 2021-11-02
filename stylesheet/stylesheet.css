@@ -173,7 +173,7 @@ main {
 
 /* メインビジュアル */
 .main-visual {
-  background-image: url(../images/fv3.jpg);
+  background-image: url(../images/mv.jpg);
   height: calc(100vh - 120px);
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,7 +221,7 @@ main {
 
 /* vision */
 .vision {
-  height: calc(100vh - 120px);
+  height: 650px;
   background-image: url(../images/vision.jpg);
   background-size: cover;
   background-position: center center;
@@ -251,7 +251,7 @@ main {
 .skills::before {
   content: "";
   background-color: #89d0ff;
-  height: 160%;
+  height: 150%;
   width: 40%;
   position: absolute;
   top: -10%;
@@ -296,19 +296,13 @@ main {
 
 /* Works */
 .works {
-  /* background-color: #fff; */
-  /* background-image: url(../images/vision.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; */
-  background-color: #89d0ff;
+  background-color: #fff;
   background-attachment: fixed;
   position: relative;
   z-index: 5;
 }
 .works>.wrapper {
-  height: 250vh;
-  padding-bottom: 140px;
+  height: 2500px;
 }
 .sticky {
   position: -webkit-sticky;
@@ -328,26 +322,23 @@ main {
   position: relative;
   top: 40px;
 }
-
 .site-contents {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: 0 50px;
 }
-.work-site3, .work-site2, .work-site1 {
-  margin: 0 20px;
-}
-
 .site-contents a {
-  width: 250px;
+  width: 200px;
   display: flex;
-  flex-direction: column;
-  margin: 20px 15px;
-  line-height: 1.7;
+  margin: 10px 20px;
 }
-.work-img {
-  width: 250px;
-  height: 150px;
+.view {
+  width: 100px;
+  margin: 40px auto;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: solid 1px #333;
 }
 
 /* workモーダル */
@@ -390,31 +381,15 @@ main {
   margin: 20px;
 }
 
-/* デザイン */
-/* .design-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-} */
-/* .design {
-
-} */
-
-
 /* フォーム */
 .contact {
-  height: 1200px;
+  padding-bottom: 100px;
   background-image: url(../images/contact.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 10;
-  -webkit-clip-path: polygon(0 0, 100% 5em, 100% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 5em, 100% 100%, 0% 100%);
-  height: calc(100vh + 5em);
-  margin-top: -5em;
+  z-index: 5;
 }
-/* Works */
 .contact .section-title::before {
   content: "Contact";
   color: rgba(221, 222, 255, 0.3);
@@ -426,11 +401,11 @@ main {
   top: 40px;
 }
 form {
+  width: 800px;
+  margin: 100px auto 0;
   background-color: rgb(255, 255, 255, 0.6);
-  width: 80%;
-  margin: 0 auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 label {
   font-size: 1.125rem;
@@ -466,7 +441,7 @@ input[type="submit"] {
   border-radius: 30px;
 }
 
-/* フォーム */
+/* フッター */
 footer {
   position: fixed;
   bottom: 0;
@@ -480,10 +455,7 @@ footer {
   z-index: 10;
 }
 
-
-
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .bg-title {
     font-size: 4rem;
   }
