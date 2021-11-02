@@ -20,6 +20,7 @@ img {
   position: relative;
   margin-top: 30px;
 }
+
 .sub-title {
   padding: 30px;
   margin-bottom: 30px;
@@ -37,11 +38,6 @@ img {
   background-color: rgb(137, 208, 255);
   border-radius: 20px;
   box-shadow: 0px 3px 5px 2px #858585;
-}
-strong {
-  font-size: 16px;
-  font-weight: bold;
-  border-bottom: solid 2px #000;
 }
 
 /* アニメーション */
@@ -455,64 +451,130 @@ footer {
   z-index: 10;
 }
 
-@media screen and (max-width: 1280px) {
-  .bg-title {
-    font-size: 4rem;
+@media screen and (max-width: 1200px) {
+  /* ベース */
+  .wrapper {
+    max-width: 600px;
   }
   .section-title {
-    font-size: 1.5rem;
-    padding: 0px;
-    margin-top: -30px;
+    font-size: 28px;
+    margin-top: 0;
   }
   .sub-title {
-    font-size: 2rem;
-    margin-bottom: 0;
+    font-size: 32px;
   }
-  .main-wrapper {
-    padding: 60px 60px 60px 0;
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: rgb(137, 208, 255);
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 2px #858585;
   }
+  /* ベース */
+
+  /* ヘッダー */
+  .header-nav {
+    margin-right: 60px;
+  }
+  /* ヘッダー */
+
+  /* サイドバー */
   .menu {
     display: none;
   }
-  .about-content {
-    padding-right: 20px;
+
+  main {
+    padding-left: 0;
+  }
+
+  /* about me*/
+  .about .section-title::before {
+    font-size: 68px;
   }
   .about-area {
+    margin: 50px 0;
+    display: flex;
     flex-direction: column;
-    margin-top: 20px;
-  }
-  .about-img img {
-    width: 250px;
-    height: 250px;
+    align-items: center;
   }
   .profile {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .profile h3 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .profile p {
-    font-size: 0.8rem;
+    font-size: 16px;
     line-height: 1.8;
   }
+  /* about me*/
 
   /* vision */
   .vision {
     height: 550px;
   }
   .vision-text {
-    width: 80%;
-    padding: 10px 20px;
-    margin-top: 30px;
+    width: auto;
+    padding: 30px 60px;
   }
   .vision-text h3 {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
+    font-size: 24px;
+    padding-bottom: 30px;
   }
   .vision-text p {
-    font-size: 1rem;
+    font-size: 16px;
   }
+  /* vision */
+
+  /* できること Skills */
+  .skills {
+    padding-bottom: 50px;
+  }
+  .skills .section-title::before {
+    font-size: 68px;
+    top: 30px;
+  }
+  .skill-content {
+    flex-direction: column;
+  }
+  .card {
+    width: 400px;
+    margin: 10px auto;
+  }
+  .card i {
+    margin: 30px 10px;
+  }
+  /* できること Skills */
+
+
+
+  /* Works */
+  .works>.wrapper {
+    height: 2500px;
+  }
+  .sticky {
+  top: 60px;
+  }
+  .works .section-title::before {
+    font-size: 68px;
+    top: 20px;
+  }
+  .site-contents {
+    margin: 0;
+  }
+  .site-contents a {
+    width: 180px;
+    margin: 5px;
+  }
+  .view {
+    padding: 10px 20px;
+  }
+  /* Works */
+
+
 
   /* モーダル */
   .site1-modal,
@@ -541,24 +603,157 @@ footer {
     font-size: .5em;
   }
 
-  /* スキル */
-  .skills {
-    padding-bottom: 50px;
-  }
-  .skill-content {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .card {
-    width: 90%;
-    padding: 10px;
-    margin: 10px auto;
-  }
-  .cord i {
-    margin: 10px;
-  }
+
+  /* フォーム */
   .contact {
     height: 650px;
   }
+  .contact .section-title::before {
+    font-size: 68px;
+    top: 30px;
+  }
+  form {
+    width: auto;
+    margin-top: 50px;
+  }
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1;
+  margin: 10px 0;
+}
+input[type="text"],input[type="email"],textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+input[type="text"],input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+textarea {
+  width: 90%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+.contact-btn {
+  padding: 20px 100px;
+  margin-top: 10px;
+  border-radius: 30px;
 }
 
+
+}
+@media screen and (max-width: 599px) {
+  /* ベース */
+  .wrapper {
+    max-width: 400px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .side-ver {
+    display: none;
+  }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: rgb(137, 208, 255);
+      border-radius: 20px;
+      box-shadow: 0px 3px 5px 2px #858585;
+    }
+  /* ベース */
+
+  main {
+    padding: 0;
+  }
+
+  /* about me*/
+  .about .section-title::before {
+    font-size: 56px;
+  }
+  .about-left img {
+    width: 200px;
+    height: 200px;
+  }
+  .about-left h3 {
+    font-size: 24px;
+  }
+  .about-area {
+    margin: 25px 0;
+  }
+  .profile {
+    margin-top: 25px;
+  }
+  .profile h3 {
+    font-size: 24px;
+  }
+  .profile p {
+    font-size: 14px;
+  }
+  /* about me*/
+
+  /* vision */
+  .vision {
+    height: 550px;
+  }
+  .vision-text h3 {
+    font-size: 20px;
+  }
+  .vision-text p {
+    font-size: 14px;
+  }
+  /* vision */
+
+  /* できること Skills */
+  .skills::before {
+    width: 50%;
+    left: 75%;
+  }
+  .skills .section-title::before {
+    font-size: 56px;
+    top: 20px;
+  }
+  .card {
+    width: 300px;
+  }
+  .card h3 {
+    font-size: 18px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  /* できること Skills */
+
+
+  /* Works */
+  .works>.wrapper {
+    height: 1500px;
+  }
+  .works .section-title::before {
+    font-size: 56px;
+  }
+  .site-contents a {
+    width: 100px;
+  }
+  .view {
+    font-size: 14px;
+  }
+  /* Works */
+
+
+
+}
