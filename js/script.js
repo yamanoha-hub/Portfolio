@@ -1,5 +1,4 @@
 $(function(){
-
   // メニューホバー
   $('.menu').hover (
     function() {  //カーソル置いたら
@@ -26,7 +25,6 @@ $(function(){
     $("html, body").animate({scrollTop : 0}, 500); //0.5sでトップに戻る
     return false;
   });
-  
 
   // モーダルオープン
   $(".work-site3").click(function() {

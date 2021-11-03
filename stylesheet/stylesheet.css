@@ -20,6 +20,14 @@ img {
   position: relative;
   margin-top: 30px;
 }
+.section-title::before {
+  color: rgba(221, 222, 255, 0.3);
+  font-size: 96px;
+  z-index: -1;
+  display: block;
+  position: relative;
+  top: 30px;
+}
 
 .sub-title {
   padding: 30px;
@@ -141,7 +149,9 @@ header {
 }
 .item li {
   margin: 15px 0;
+  text-align: center;
 }
+
 #page-top {
   width: 50px;
   height: 50px;
@@ -180,12 +190,6 @@ main {
 /* about me*/
 .about .section-title::before {
   content: "About Me";
-  color: rgba(221, 222, 255, 0.3);
-  font-size: 96px;
-  z-index: -1;
-  display: block;
-  position: relative;
-  top: 30px;
 }
 .about-area {
   margin: 100px 0;
@@ -207,7 +211,6 @@ main {
 }
 .profile {
   width: 600px;
-  margin: 0 20px;
 }
 .profile h3 {
   font-size: 26px;
@@ -260,13 +263,6 @@ main {
 }
 .skills .section-title::before {
   content: "Skills";
-  color: rgba(221, 222, 255, 0.3);
-  font-size: 96px;
-  line-height: 1;
-  z-index: -1;
-  display: block;
-  position: relative;
-  top: 40px;
 }
 .skill-content {
   margin: 50px 0;
@@ -310,13 +306,6 @@ main {
 }
 .works .section-title::before {
   content: "Works";
-  color: rgba(221, 222, 255, 0.3);
-  font-size: 96px;
-  line-height: 1;
-  z-index: -1;
-  display: block;
-  position: relative;
-  top: 40px;
 }
 .site-contents {
   display: flex;
@@ -324,16 +313,19 @@ main {
   flex-wrap: wrap;
   margin: 0 50px;
 }
+
 .site-contents a {
   width: 200px;
   display: flex;
   margin: 10px 20px;
 }
 .view {
-  width: 100px;
+  width: 150px;
   margin: 40px auto;
   font-size: 18px;
-  padding: 10px 20px;
+}
+.view a {
+  padding: 15px 30px;
   border: solid 1px #333;
 }
 
@@ -388,13 +380,6 @@ main {
 }
 .contact .section-title::before {
   content: "Contact";
-  color: rgba(221, 222, 255, 0.3);
-  font-size: 96px;
-  line-height: 1;
-  z-index: -1;
-  display: block;
-  position: relative;
-  top: 40px;
 }
 form {
   width: 800px;
@@ -403,10 +388,12 @@ form {
   padding: 20px;
   border-radius: 20px;
 }
+.name-area {
+  height: 1000px;
+}
 label {
-  font-size: 1.125rem;
+  font-size: 18px;
   margin-bottom: 10px;
-  display: block;
   line-height: 1;
   margin: 10px 0;
 }
@@ -415,7 +402,8 @@ input[type="text"],input[type="email"],textarea {
   border: 1px solid #fff;
   border-radius: 10px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 18px;
+  display: flex;
 }
 input[type="text"],input[type="email"] {
   width: 100%;
@@ -424,7 +412,7 @@ input[type="text"],input[type="email"] {
 textarea {
   width: 90%;
   max-width: 480px;
-  height: 6rem;
+  height: 150px;
 }
 input[type="submit"] {
   border: none;
@@ -451,6 +439,55 @@ footer {
   z-index: 10;
 }
 
+
+/* works.html */
+.works-visual {
+  height: 300px;
+  background-image: url(../images/mv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* website */
+.website .section-title::before {
+  content: "WEB SITE";
+}
+
+.website .site-contents {
+  display: flex;
+}
+.site-contents {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 50px;
+}
+.site-contents a {
+  width: 200px;
+  display: flex;
+  margin: 10px 20px;
+}
+/* website */
+
+/* design */
+.design .section-title::before {
+  content: "DESIGN";
+}
+.design-content {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.design-content img {
+  width: 80%;
+}
+.design-text a {
+  color: #fff;
+  padding: 5px 50px;
+}
+/* design */
+/* works.html */
+
 @media screen and (max-width: 1200px) {
   /* ベース */
   .wrapper {
@@ -463,7 +500,9 @@ footer {
   .sub-title {
     font-size: 32px;
   }
-
+  .section-title::before {
+    font-size: 68px;
+  }
   .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -474,11 +513,9 @@ footer {
   }
   /* ベース */
 
-  /* ヘッダー */
-  .header-nav {
+  .header-nav, footer p {
     margin-right: 60px;
   }
-  /* ヘッダー */
 
   /* サイドバー */
   .menu {
@@ -490,9 +527,6 @@ footer {
   }
 
   /* about me*/
-  .about .section-title::before {
-    font-size: 68px;
-  }
   .about-area {
     margin: 50px 0;
     display: flex;
@@ -500,7 +534,7 @@ footer {
     align-items: center;
   }
   .profile {
-    width: 100%;
+    width: 500px;
     margin-top: 50px;
   }
   .profile h3 {
@@ -517,8 +551,8 @@ footer {
     height: 550px;
   }
   .vision-text {
-    width: auto;
-    padding: 30px 60px;
+    width: 500px;
+    padding: 30px 10px;
   }
   .vision-text h3 {
     font-size: 24px;
@@ -533,10 +567,6 @@ footer {
   .skills {
     padding-bottom: 50px;
   }
-  .skills .section-title::before {
-    font-size: 68px;
-    top: 30px;
-  }
   .skill-content {
     flex-direction: column;
   }
@@ -549,18 +579,12 @@ footer {
   }
   /* できること Skills */
 
-
-
   /* Works */
   .works>.wrapper {
     height: 2500px;
   }
   .sticky {
   top: 60px;
-  }
-  .works .section-title::before {
-    font-size: 68px;
-    top: 20px;
   }
   .site-contents {
     margin: 0;
@@ -573,8 +597,6 @@ footer {
     padding: 10px 20px;
   }
   /* Works */
-
-
 
   /* モーダル */
   .site1-modal,
@@ -603,55 +625,22 @@ footer {
     font-size: .5em;
   }
 
-
   /* フォーム */
   .contact {
-    height: 650px;
-  }
-  .contact .section-title::before {
-    font-size: 68px;
-    top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
   form {
     width: auto;
     margin-top: 50px;
   }
-label {
-  font-size: 1.125rem;
-  margin-bottom: 10px;
-  display: block;
-  line-height: 1;
-  margin: 10px 0;
-}
-input[type="text"],input[type="email"],textarea {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 1rem;
-}
-input[type="text"],input[type="email"] {
-  width: 100%;
-  max-width: 240px;
-}
-textarea {
-  width: 90%;
-  max-width: 480px;
-  height: 6rem;
-}
-input[type="submit"] {
-  border: none;
-  cursor: pointer;
-  line-height: 1;
-}
-.contact-btn {
-  padding: 20px 100px;
-  margin-top: 10px;
-  border-radius: 30px;
-}
-
+  textarea {
+    max-width: 360px;
+  }
+  /* フォーム */
 
 }
+
 @media screen and (max-width: 599px) {
   /* ベース */
   .wrapper {
@@ -663,28 +652,43 @@ input[type="submit"] {
   .sub-title {
     font-size: 20px;
   }
+  .section-title::before {
+    font-size: 56px;
+  }
   .side-ver {
     display: none;
   }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 10px;
-      background-color: rgb(137, 208, 255);
-      border-radius: 20px;
-      box-shadow: 0px 3px 5px 2px #858585;
-    }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: rgb(137, 208, 255);
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 2px #858585;
+  }
   /* ベース */
 
   main {
     padding: 0;
   }
+  .header-nav, footer p {
+    margin-right: 0;
+  }
+
+  /* ヘッダー */
+  header {
+    height: 40px;
+  }
+  .header-nav {
+    line-height: 40px;
+  }
+  .header-nav img {
+    width: 30px;
+  }
+  /* ヘッダー */
 
   /* about me*/
-  .about .section-title::before {
-    font-size: 56px;
-  }
   .about-left img {
     width: 200px;
     height: 200px;
@@ -696,7 +700,7 @@ input[type="submit"] {
     margin: 25px 0;
   }
   .profile {
-    margin-top: 25px;
+    margin: 25px 10px;
   }
   .profile h3 {
     font-size: 24px;
@@ -710,6 +714,9 @@ input[type="submit"] {
   .vision {
     height: 550px;
   }
+  .vision-text {
+    max-width: 350px;
+  }
   .vision-text h3 {
     font-size: 20px;
   }
@@ -721,11 +728,9 @@ input[type="submit"] {
   /* できること Skills */
   .skills::before {
     width: 50%;
-    left: 75%;
-  }
-  .skills .section-title::before {
-    font-size: 56px;
-    top: 20px;
+    height: 60%;
+    top: 0%;
+    left: 30%;
   }
   .card {
     width: 300px;
@@ -738,13 +743,9 @@ input[type="submit"] {
   }
   /* できること Skills */
 
-
   /* Works */
   .works>.wrapper {
     height: 1500px;
-  }
-  .works .section-title::before {
-    font-size: 56px;
   }
   .site-contents a {
     width: 100px;
@@ -754,6 +755,25 @@ input[type="submit"] {
   }
   /* Works */
 
+  /* フォーム */
+  label {
+    font-size: 16px;
+  }
+  .contact {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  form {
+    margin-top: 30px;
+  }
+  /* フォーム */
+
+  /* フッター */
+  footer {
+    height: 40px;
+    line-height: 40px;
+  }
+  /* フッター */
 
 
 }
