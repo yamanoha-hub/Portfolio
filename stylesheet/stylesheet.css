@@ -348,25 +348,49 @@ main {
 }
 .site1-modal,
 .site2-modal,
-.site3-modal {
+.site3-modal,
+.site4-modal,
+.site5-modal {
   min-height: 70%;
   background-color: rgba(218, 218, 218, 0.8);
   border-radius: 30px;
   margin: 50px;
   display: none;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .modal-open {
   display: flex;
 }
+.modal-left {
+  text-align: center;
+  max-width: 50%;
+}
 .modal-wrapper img {
-  width: 50%;
+  max-width: 60%;
   margin: 10px;
 }
 .modal-text {
-  width: 400px;
+  max-width: 40%;
   margin: 20px;
+  line-height: 1.5;
+}
+.modal-text h3 {
+  font-size: 24px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.parts {
+  margin-top: 20px;
+}
+.parts strong {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-text a {
+  margin-top: 50px;
 }
 
 /* フォーム */
@@ -450,6 +474,42 @@ footer {
 }
 
 /* website */
+.website .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pick-up {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pick-up img {
+  width: 30%;
+  height: 30%;
+}
+.pickup-text {
+  max-width: 550px;
+}
+.pickup-text h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+
+}
+
+
+/* .work-site {
+
+} */
+
+
+
+
+
+
+
+
 .website .section-title::before {
   content: "WEB SITE";
 }

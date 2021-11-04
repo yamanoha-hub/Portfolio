@@ -27,6 +27,14 @@ $(function(){
   });
 
   // モーダルオープン
+  $(".work-site5").click(function() {
+    $('.modal-wrapper').show();
+    $(".site5-modal").addClass("modal-open");
+  });
+  $(".work-site4").click(function() {
+    $('.modal-wrapper').show();
+    $(".site4-modal").addClass("modal-open");
+  });
   $(".work-site3").click(function() {
     $('.modal-wrapper').show();
     $(".site3-modal").addClass("modal-open");
@@ -43,6 +51,8 @@ $(function(){
   // モーダルクローズ
   $('.close-modal').click(function() {
     $('.modal-wrapper').hide();
+    $(".site5-modal").removeClass("modal-open");
+    $(".site4-modal").removeClass("modal-open");
     $(".site3-modal").removeClass("modal-open");
     $(".site2-modal").removeClass("modal-open");
     $(".site1-modal").removeClass("modal-open");
