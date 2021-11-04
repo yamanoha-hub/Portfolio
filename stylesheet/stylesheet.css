@@ -40,6 +40,7 @@ img {
   color: rgb(137, 208, 255);
 }
 .btn {
+  color: #fff;
   display: inline-block;
   padding: 10px 20px;
   margin-top: 10px;
@@ -478,38 +479,31 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
 .pick-up {
   padding: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.pickup-left {
+  max-width: 500px;
+  text-align: center;
+}
+.pickup-left h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 .pick-up img {
-  width: 30%;
-  height: 30%;
+  width: 50%;
+  height: 50%;
 }
 .pickup-text {
-  max-width: 550px;
+  max-width: 500px;
 }
 .pickup-text h3 {
   margin-bottom: 10px;
   font-size: 24px;
-
 }
-
-
-/* .work-site {
-
-} */
-
-
-
-
-
-
-
-
 .website .section-title::before {
   content: "WEB SITE";
 }
@@ -529,6 +523,12 @@ footer {
 }
 /* website */
 
+/* others-site */
+.others-site{
+  margin-top: 50px; 
+}
+/* others-site */
+
 /* design */
 .design .section-title::before {
   content: "DESIGN";
@@ -542,7 +542,6 @@ footer {
   width: 80%;
 }
 .design-text a {
-  color: #fff;
   padding: 5px 50px;
 }
 /* design */
@@ -699,6 +698,38 @@ footer {
   }
   /* フォーム */
 
+
+  /* works.html */
+  .works-visual {
+    height: 200px;
+  }
+  /* website */
+  .pick-up {
+    flex-direction: column;
+  }
+  .pick-up img {
+    width: 80%;
+    height: 80%;
+  }
+  .site-contents {
+    margin-bottom: 20px;
+  }
+  .pickup-text a {
+    font-size: 12px;
+  }
+  /* website */
+  
+  /* design */
+  .design-content {
+    margin-bottom: 80px;
+    font-size: 16px;
+  }
+  .design-text a {
+    font-size: 12px;
+  }
+  /* design */
+  /* works.html */
+
 }
 
 @media screen and (max-width: 599px) {
@@ -835,5 +866,15 @@ footer {
   }
   /* フッター */
 
+  /* works.html */
+  .pickup-left h3 {
+    font-size: 20px;
+  }
+
+  .pickup-text h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  /* works.html */
 
 }
