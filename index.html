@@ -14,20 +14,22 @@
   <title>Noha Portfolio</title>
 
   <!-- css読み込み -->
-  <link rel="stylesheet" href="stylesheet/reset.css">
-  <link rel="stylesheet" href="stylesheet/stylesheet.css">
-  <!-- <link rel="stylesheet" href="sass/style.css"> -->
+  <!-- <link rel="stylesheet" href="stylesheet/reset.css"> -->
+  <!-- <link rel="stylesheet" href="stylesheet/stylesheet.css"> -->
+  <link rel="stylesheet" href="sass/reset.css">
+  <link rel="stylesheet" href="sass/style.css">
 
   <!-- jquery -->
   <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="header-nav">
+  <header class="header">
+    <div class="header__logo">
       <img src="images/logo-img.png">
-      <h1 class="logo">Noha Portfolio</h1>
+      <h1>Noha Portfolio</h1>
     </div>
-    <div class="menu">
+    <!-- .header__logo -->
+    <div class="header__menu">
       <div class="hamburger">
         <a class="nav-btn">
           <span></span>
@@ -35,46 +37,65 @@
           <span></span>
         </a>
       </div>
-      <div class="menu-content">
-        <div class="menu-content-inner">
+      <div class="header__menu__content" id="open-menu">
+        <nav class="menu__inner">
           <ul>
             <li class="transition10 delay03"><a id="about" href="#about-id">About Me</a></li>
             <li class="transition10 delay05"><a id="skills" href="#skills-id">Skills</a></li>
             <li class="transition10 delay07"><a id="works" href="#works-id">Works</a></li>
             <li class="transition10 delay09"><a id="contact" href="#contact-id">Contact</a></li>
           </ul>
-        </div>
+        </nav>
+        <!-- .menu__inner -->
       </div>
+      <!-- .header__menu__content -->
     </div>
+    <!-- .header__menu -->
   </header>
   <div class="side-ver">
-    <ul class="item">
-      <li>
+    <ul class="side-ver__inner">
+      <li class="side-ver__inner__item">
         <a href="https://qiita.com/NG-noha" target="_blank">
           <i class="fas fa-file-code fa-2x"></i>
           <p>Qiita</p>
         </a>
       </li>
-      <li><a href="https://github.com/yamanoha-hub"  target="_blank"><i class="fab fa-github fa-2x"></i><p>Git</p></a></li>
-      <li><a href="https://note.com/noha7593" target="_blank"><i class="far fa-file fa-2x"></i><p>Note</p></a></li>
+      <!-- .side-ver__inner__item -->
+      <li class="side-ver__inner__item">
+        <a href="https://github.com/yamanoha-hub"  target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+          <p>Git</p>
+        </a>
+      </li>
+      <!-- .side-ver__inner__item -->
+      <li class="side-ver__inner__item">
+        <a href="https://note.com/noha7593" target="_blank">
+          <i class="far fa-file fa-2x"></i>
+          <p>Note</p>
+        </a>
+      </li>
+      <!-- .side-ver__inner__item -->
     </ul>
+    <!-- .side-ver__inner -->
     <div id="page-top">
       <a href="#">
         <i class="fas fa-arrow-up"></i>
       </a>
     </div>
   </div>
+  <!-- .side-ver -->
   <main>
     <section class="main-visual"></section>
+
     <section class="about" id="about-id">
       <div class="wrapper">
         <h2 class="section-title">私について</h2>
-        <div class="about-area">
-          <div class="about-left">
+        <div class="about__area">
+          <div class="about__area__left">
             <img src="images/profile-img.jpg" alt="プロフィール画像">
             <h3>Yasumitsu Yamanoha</h3>
           </div>
-          <div class="profile">
+          <div class="about__area__profile">
             <h3>Profile</h3>
             <p>沖縄県出身、名護市在住。沖縄県北部の合同庁舎、会計年度職員の事務員として働いておました。WEBサイト制作の魅力に惹かれ、コーディングを中心に学習。またJavaScriptでWEBアプリケーションを制作できように勉強中です。Progateから学習を開始しUdemyや書籍でサイト制作の基礎を理解し、デザインAdobeチュートリアル、書籍を中心に学んでおります。</p><br>
             <p>また、ダンスのインストラクター経験や地域行事の参加、直近ではチームshow優勝など異の経歴をもつ努力家。ダンスを通じて多くのクリエイトする人たちと関わり、価値を共有し合ながら提供し続けています。</p>
@@ -82,20 +103,25 @@
         </div>
       </div>
     </section>
+    <!-- .about -->
+
     <section class="vision">
       <div class="wrapper">
         <h3 class="sub-title">Vision</h3>
-        <div class="vision-text">
+        <div class="vision__text">
           <h3>意気込み</h3>
           <p>Webコーダー志望。適切なマークアップや伝わるようなデザインを目標に日々独学で学習しました。</p><br>
           <p>実務経験はありませんが入社後は、自ら提案することができお客様の要望を理解して、イメージを妥協する事なく作り上げるよう努力し続け責任持ってやり遂げます。</p>
         </div>
+        <!-- .vision-text -->
       </div>
     </section>
+    <!-- .vision -->
+
     <section class="skills" id="skills-id">
       <div class="wrapper">
         <h2 class="section-title">できること</h2>
-        <div class="skill-content">
+        <div class="skills__content">
           <div class="card">
             <h3>HTML,CSS,<br>SCSS, jQuery</h3>
             <i class="far fa-file-code fa-6x"></i>
@@ -112,6 +138,7 @@
             <i class="fab fa-github fa-2x"></i>
             <i class="fas fa-fire fa-2x"></i>
             <p>git学習後に今まで学習してきたサイトを載せました。右のサイドバーから確認できます。</p>
+
             <h3 class="strengthen">※強化中</h3>
             <ul>
               <li>WordPress(PHP)</li>
@@ -120,8 +147,11 @@
             </ul>
           </div>
         </div>
+        <!-- .skill-content -->
       </div>
     </section>
+    <!-- .skills -->
+
     <section class="works sticky" id="works-id">
       <div class="wrapper">
         <div class="sticky">
@@ -166,36 +196,41 @@
         </div>
       </div>
     </section>
+    <!-- .works sticky -->
+
     <section class="contact sticky" id="contact-id">
       <div class="wrapper">
         <h2 class="section-title">Contact</h2>
-        <form action="#">
-          <div class="form-contents">
-            <div id="name-area">
-              <label for="name">お名前</label>
-              <p class="alert">Alert : 未解答</p>
-              <input type="text" id="name" name="your-name">
-            </div>
-            <div id="furigana-area">
-              <label for="name">フリガナ</label>
+        <form action="#" class="form">
+          <div id="form__name">
+            <span for="name">お名前</span>
+            <p class="alert">Alert : 未解答</p>
+            <input type="text" id="name" name="your-name">
+          </div>
+          <!-- .name-area -->
+          <div id="furigana-area">
+              <span for="name">フリガナ</span>
               <p class="alert">Alert : 未解答</p>
               <input type="text" id="huri" name="your-huri">
-            </div>
-            <div id="mail-area">
-              <label for="name">メールアドレス</label>
+          </div>
+          <!-- .furigana-area -->
+          <div id="form__mail">
+              <span for="name">メールアドレス</span>
               <p class="alert">Alert : 未解答</p>
               <input type="email" id="email" name="your-email">
           </div>
-          <div id="message-area">
-            <label for="message">メッセージ</label>
+          <!-- .mail-area -->
+          <div id="form__message">
+            <span for="message">メッセージ</span>
             <p class="alert">Alert : 未解答</p>
             <textarea name="your-message" id="message" cols="30" rows="10"></textarea>
           </div>
-        </div>
-        <input type="submit" class="contact-btn" value="送信"  id="submitBtn">
+          <!-- .message-area -->
+          <input type="submit" class="contact-btn" value="送信"  id="submitBtn">
         </form>
       </div>
     </section>
+    <!-- .contact sticky -->
   </main>
   <div class="modal-wrapper">
     <div class="site5-modal" id="site5">

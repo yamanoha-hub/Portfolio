@@ -1,11 +1,533 @@
 @import "_base";
 
-header {
-  width: 100vw;
+
+// 表示崩れ見るため
+* {
+  outline: 2px solid blue;
+}
+
+.open-menu {
+  display: block;
+}
+
+.header {
+  width: 100%;
   height: 60px;
   box-sizing: border-box;
   position: fixed;
-  text-align: center;
-  z-index: 10;
+  top: 0;
+  z-index: 100;
   background-color: #fff;
+  &__logo {
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    img {
+      width: 40px;
+      padding-right: 10px;
+    }
+  }
+  &__menu {
+    @include header__menu;
+  }
 }
+.side-ver {
+  @include side-bar;
+}
+
+/* メインビジュアル */
+.main-visual {
+  background-image: url(../images/mv.jpg);
+  height: calc(100vh - 120px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 10px 10px -10px #333;
+}
+/* メインビジュアル */
+
+/* about me*/
+.about {
+  padding-top: 30px;
+  .section-title {
+    @include section-ttl;
+    &::before {
+      content: "About Me";
+    }
+  }
+  &__area {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    &__left {
+      width: 600px;
+      text-align: center;
+      img {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+      }
+       h3 {
+        font-size: 42px;
+      }
+    }
+    &__profile {
+      width: 750px;
+      margin-right: 10px;
+      margin-left: 10px;
+      h3 {
+        font-size: 32px;
+        border-bottom: 2px solid #000;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 22px;
+        line-height: 1.75;
+      }
+    }
+    @include media(l) {
+      &__left {
+        width: 400px;
+        img {
+          width: 300px;
+          height: 300px;
+        }
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &__profile {
+        width: 600px;
+        h3 {
+          font-size: 26px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 2;
+        }
+      }
+    }
+    @include media(m) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      &__left {
+        margin-bottom: 30px;
+      }
+      &__profile {
+        width: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+    }
+    @include media(s) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      &__left {
+        width: auto;
+        margin-bottom: 0;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+      }
+      &__profile {
+        padding-right: 10px;
+        padding-left: 10px;
+        h3 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+/* about me*/
+
+/* vision */
+.vision {
+  height: 650px;
+  background-image: url(../images/vision.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @include sub-ttl;
+  .vision__text {
+    display: none;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 550px;
+    padding: 30px 60px;
+    margin: 0 auto;
+    h3 {
+      font-size: 26px;
+      padding-bottom: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
+    @include media(m) {
+      width: 300px;
+    }
+  }
+}
+/* vision */
+
+/* できること Skills */
+.skills {
+  padding-top: 30px;
+  position: relative;
+  padding-bottom: 50px;
+  &::before {
+    content: "";
+    background-color: #89d0ff;
+    height: 150%;
+    width: 40%;
+    position: absolute;
+    top: -10%;
+    left: 55%;
+      transform-origin: left top;  /* X軸の位置 Y軸の位置 */
+      transform: skewX(-30deg);  /* 回転 */
+    z-index: -1;
+    @include media(m) {
+      width: 50%;
+      height: 60%;
+      top: 0%;
+      left: 30%;
+    }
+  }
+  .section-title {
+    @include section-ttl;
+    &::before {
+      content: "Skills";
+    }
+  }
+  &__content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    .card {
+      width: 400px;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      padding-left: 20px;
+      margin: 5px;
+      background-color: #fff;
+      box-shadow: 0 5px 5px #333;
+      border-radius: 20px;
+      h3 {
+        font-size: 26px;
+      }
+      i {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      p {
+        font-size: 20px;
+      }
+      .strengthen {
+        margin-top: 10px;
+      }
+    }
+    @include media(l) {
+      .card {
+        width: 330px;
+        h3 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    @include media(m) {
+      flex-direction: column;
+      align-items: center;
+      .card {
+        width: 100%;
+
+      }
+    }
+  }
+}
+/* できること Skills */
+
+
+/* Works */
+.works {
+  padding-top: 30px;
+  background-color: #fff;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 5;
+  .section-title {
+    @include section-ttl;
+    &::before {
+      content: "Works";
+    }
+  }
+  .wrapper {
+    height: 2500px;
+  }
+  .site-contents {
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    a {
+      width: 200px;
+      display: flex;
+      margin: 10px 20px;
+    }
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 60px;
+  .section-title {
+    top: -30px;
+  }
+  .view {
+    width: 150px;
+    margin: 40px auto;
+    font-size: 18px;
+    a {
+      padding: 15px 30px;
+      border: solid 1px #333;
+    }
+  }
+}
+/* Works */
+
+/* workモーダル */
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.close-modal {
+  position: absolute;
+  top: 70px;
+  right: 80px;
+  cursor: pointer;
+}
+.site1-modal,
+.site2-modal,
+.site3-modal,
+.site4-modal,
+.site5-modal {
+  min-height: 70%;
+  background-color: rgba(218, 218, 218, 0.8);
+  border-radius: 30px;
+  margin: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-open {
+  display: flex;
+}
+.modal-left {
+  text-align: center;
+  max-width: 50%;
+}
+.modal-wrapper img {
+  max-width: 60%;
+  margin: 10px;
+}
+.modal-text {
+  max-width: 40%;
+  margin: 20px;
+  line-height: 1.5;
+}
+.modal-text h3 {
+  font-size: 24px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.parts {
+  margin-top: 20px;
+}
+.parts strong {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-text a {
+  margin-top: 50px;
+}
+/* workモーダル */
+
+
+/* フォーム */
+.contact {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background-image: url(../images/contact.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 5;
+  .section-title {
+    @include section-ttl;
+    &::before {
+      content: "Contact";
+    }
+  }
+  @include media(m) {
+    padding-top: 30px;
+  }
+  @include media(s) {
+    padding-top: 0;
+  }
+}
+.form {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 20px;
+  span {
+    font-size: 26px;
+    margin-bottom: 10px;
+    line-height: 1;
+    margin: 10px 0;
+  }
+  input[type="text"],input[type="email"],textarea {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+  }
+  input[type="text"],input[type="email"] {
+    width: 100%;
+    max-width: 240px;
+  }
+  textarea {
+    width: 90%;
+    max-width: 480px;
+    height: 150px;
+  }
+  input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .contact-btn {
+    padding: 20px 100px;
+    margin-top: 10px;
+    border-radius: 30px;
+  }
+  @include media(m) {
+  }
+}
+
+/* フォーム */
+
+/* フッター */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+  font-size: 8px;
+  z-index: 10;
+}
+/* フッター */
+
+
+
+/* works.html */
+.works-visual {
+  height: 300px;
+  background-image: url(../images/mv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* website */
+.pick-up {
+  .section-title {
+    @include section-ttl;
+    &::before {
+      content: "WEB SITE";
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contents {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .pickup-left {
+      max-width: 500px;
+      text-align: center;
+    }
+    .pickup-left h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .pick-up img {
+      width: 50%;
+      height: 50%;
+    }
+    .pickup-text {
+      max-width: 500px;
+    }
+    .pickup-text h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+  }
+
+}
+/* website */
+
+
+
+
+
+
+
+
+
+
+

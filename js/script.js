@@ -1,18 +1,18 @@
 $(function(){
   // メニューホバー
-  $('.menu').hover (
+  $('.header__menu').hover (
     function() {  //カーソル置いたら
-      $('.menu-content').fadeIn();
-      $('.menu-content').addClass('on');
+      $('.header__menu__content').fadeIn();
+      $('.header__menu__content').addClass('on');
     },
     function() {  //外したら
-      $('.menu-content').fadeOut();
-      $('.menu-content').removeClass('on');
+      $('.header__menu__content').fadeOut();
+      $('.header__menu__content').removeClass('on');
     }
   );
 
   // スムーススクロール
-  $('.menu-content-inner a[href^="#"]').click(function() {
+  $('.menu__inner a[href^="#"]').click(function() {
     var target = $($(this).attr("href")).offset().top; //href属性の取得
     target -= 60;
 
@@ -85,7 +85,6 @@ $(function(){
     } else {
       $("#mail-area").children(".alert").hide();
     }
-  
     // メッセージ
     if(!$("textarea").val()) {
       $("#message-area").children(".alert").show();

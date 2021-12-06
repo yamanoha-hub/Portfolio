@@ -1,44 +1,54 @@
+// =============================================
+// 変数
+// =============================================
+$font-Color: #333;
+$bg-color:  #89d0ff;
+
+// ============================================
+// メディアクエリ
+// ============================================
+$breakpoints: (
+  l: "screen and (max-width: 1600px)", //PC
+  m: "screen and (max-width: 1280px)", //タブレット
+  s: "screen and (max-width: 599px)",  //スマートフォン
+);
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
 /* ベース */
 body {
-  color: #333;
+  color: $font-Color;
   line-height: 2.0;
   z-index: 10;
 }
 .wrapper {
-  max-width: 1180px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 img {
   width: 100%;
   object-fit: cover;
 }
-
-.section-title {
-  text-align: center;
-  font-size: 38px;
-  line-height: 1;
-  position: relative;
-  margin-top: 30px;
+ul {
+  list-style: none;
 }
-.section-title::before {
-  color: rgba(221, 222, 255, 0.3);
-  font-size: 96px;
-  z-index: -1;
-  display: block;
-  position: relative;
-  top: 30px;
+a {
+  color: $font-Color;
+	text-decoration: none;
 }
 
-.sub-title {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
-  color: #fff;
-  text-align: center;
+main {
+  padding: 60px;
+  @include media(s) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-.sub-title::first-letter {
-  color: rgb(137, 208, 255);
-}
+
 .btn {
   color: #fff;
   display: inline-block;
@@ -55,3 +65,154 @@ img {
 .delay05 {transition-delay: .5s;}
 .delay07 {transition-delay: .7s;}
 .delay09 {transition-delay: .9s;}
+
+@mixin section-ttl {
+  text-align: center;
+  font-size: 38px;
+  line-height: 1;
+  position: relative;
+  // margin-top: 30px;
+  &::before {
+    color: rgba(221, 222, 255, 0.3);
+    font-size: 96px;
+    z-index: -1;
+    display: block;
+    position: relative;
+    top: 30px;
+  }
+  @include media(s) {
+    font-size: 24px;
+    &::before {
+      font-size: 56px;
+    }
+  }
+}
+@mixin sub-ttl {
+  .sub-title {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    &::first-letter {
+      color: $bg-color;
+    }
+  }
+}
+@mixin hamburger {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    .nav-btn {
+      position: relative;
+      width: 30px;
+      height: 26px;
+      span {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #333;
+        &:nth-of-type(1) {
+          top: 0;
+        }
+        &:nth-of-type(2) {
+          top: 11px;
+        }
+        &:nth-of-type(3) {
+          bottom: 0;
+        }
+      }
+    }
+    // @include media(s) {
+      // display: none;
+    // }
+  }
+}
+
+@mixin page-top {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 5px;
+  bottom: 30px;
+  background: #333;
+  border-radius: 50%;
+  a {
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin header__menu {
+  width: 60px;
+  height: calc(100vh - 120px);
+  display: flex;
+  text-align: center;
+
+  @include hamburger;
+
+  &__content {
+    display: none;
+    position: absolute;
+    left: 60px;
+    background-color: #fff;
+    z-index: -1;
+    .menu__inner ul { 
+      width: 300px;
+      height: calc(100vh - 120px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        margin: 20px;
+        opacity: 0;
+        transform: translateY(100px);
+      }
+    }
+    &.on ul li {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  // @include media(s) {
+    // position: none;
+  // }
+}
+
+@mixin side-bar {
+  width: 60px;
+  height: calc(100vh - 120px);
+  background-color: #fff;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  &__inner {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+
+  #page-top {
+    @include page-top;
+  }
+}
+
+
+
+
+
+
