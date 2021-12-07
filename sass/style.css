@@ -48,6 +48,12 @@ main {
           box-shadow: 0px 3px 5px 2px #858585;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+}
+
 /* アニメーション */
 .transition10 {
   -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -119,6 +125,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  z-index: 100;
 }
 
 .header__menu .hamburger {
@@ -258,7 +265,7 @@ main {
 }
 
 /* メインビジュアル */
-/* about me*/
+/* about me OK */
 .about {
   padding-top: 30px;
 }
@@ -409,7 +416,7 @@ main {
   }
 }
 
-/* about me*/
+/* about me */
 /* vision */
 .vision {
   height: 650px;
@@ -458,7 +465,7 @@ main {
 }
 
 /* vision */
-/* できること Skills */
+/* Skills OK*/
 .skills {
   padding-top: 30px;
   position: relative;
@@ -479,7 +486,7 @@ main {
   -webkit-transform: skewX(-30deg);
           transform: skewX(-30deg);
   /* 回転 */
-  z-index: -1;
+  z-index: -10;
 }
 
 @media screen and (max-width: 1280px) {
@@ -488,6 +495,12 @@ main {
     height: 60%;
     top: 0%;
     left: 30%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .skills::before {
+    padding-bottom: 0;
   }
 }
 
@@ -588,28 +601,58 @@ main {
             align-items: center;
   }
   .skills__content .card {
-    width: 100%;
+    width: 470px;
+    margin-bottom: 20px;
+  }
+  .skills__content .card h3 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .skills__content .card i {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .skills__content .card p {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
-/* できること Skills */
+@media screen and (max-width: 599px) {
+  .skills__content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .skills__content .card {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .skills__content .card i {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Skills */
 /* Works */
-.works {
-  padding-top: 30px;
+.work {
   background-color: #fff;
   background-attachment: fixed;
-  position: relative;
   z-index: 5;
 }
 
-.works .section-title {
+.work .wrapper {
+  height: 2500px;
+}
+
+.work .wrapper .section-title {
   text-align: center;
   font-size: 38px;
   line-height: 1;
   position: relative;
 }
 
-.works .section-title::before {
+.work .wrapper .section-title::before {
   color: rgba(221, 222, 255, 0.3);
   font-size: 96px;
   z-index: -1;
@@ -619,62 +662,75 @@ main {
 }
 
 @media screen and (max-width: 599px) {
-  .works .section-title {
+  .work .wrapper .section-title {
     font-size: 24px;
   }
-  .works .section-title::before {
+  .work .wrapper .section-title::before {
     font-size: 56px;
   }
 }
 
-.works .section-title::before {
+.work .wrapper .section-title::before {
   content: "Works";
 }
 
-.works .wrapper {
-  height: 2500px;
-}
-
-.works .site-contents {
+.work__contents {
+  max-width: 1200px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: gold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 50px;
 }
 
-.works .site-contents a {
-  width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 10px 20px;
+.work__contents__site {
+  width: 300px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 60px;
+.work__contents__site img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
 }
 
-.sticky .section-title {
-  top: -30px;
-}
-
-.sticky .view {
+.work .view {
   width: 150px;
-  margin: 40px auto;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 18px;
 }
 
-.sticky .view a {
+.work .view a {
   padding: 15px 30px;
   border: solid 1px #333;
+}
+
+@media screen and (max-width: 1280px) {
+  .work {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .work__contents {
+    max-width: 900px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .work__contents__site {
+    width: 250px;
+  }
+  .work__contents__site img {
+    max-width: 250px;
+    height: 180px;
+  }
 }
 
 /* Works */
@@ -803,14 +859,9 @@ main {
   }
 }
 
-@media screen and (max-width: 599px) {
-  .contact {
-    padding-top: 0;
-  }
-}
-
 .form {
-  margin-top: 100px;
+  width: 1000px;
+  margin-top: 70px;
   margin-right: auto;
   margin-left: auto;
   background-color: rgba(255, 255, 255, 0.6);
@@ -818,45 +869,53 @@ main {
   border-radius: 20px;
 }
 
-.form span {
-  font-size: 26px;
-  margin-bottom: 10px;
-  line-height: 1;
-  margin: 10px 0;
-}
-
-.form input[type="text"], .form input[type="email"], .form textarea {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding: 10px;
+.form input {
+  width: 400px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+  height: 50px;
   font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.form input[type="text"], .form input[type="email"] {
-  width: 100%;
-  max-width: 240px;
 }
 
 .form textarea {
   width: 90%;
-  max-width: 480px;
+  max-width: 600px;
   height: 150px;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.form__name, .form__furigana, .form__mail, .form__message {
+  margin-bottom: 15px;
+}
+
+.form__name h3, .form__furigana h3, .form__mail h3, .form__message h3 {
+  font-size: 18px;
 }
 
 .form input[type="submit"] {
-  border: none;
-  cursor: pointer;
-  line-height: 1;
+  margin-top: 50px;
+  width: 200px;
+  height: 42px;
+  font-size: 18px;
+  background-color: #fff;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
 }
 
-.form .contact-btn {
-  padding: 20px 100px;
-  margin-top: 10px;
-  border-radius: 30px;
+@media screen and (max-width: 1280px) {
+  .form {
+    width: 400px;
+  }
+  .form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
 /* フォーム */

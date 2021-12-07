@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- font Awesome -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <!-- ファビコン -->
-  <link rel="icon" href="images/logo-img.png">
-  <!-- タイトル -->
-  <title>Noha Portfolio</title>
-  <!-- css読み込み -->
-  <link rel="stylesheet" href="stylesheet/reset.css">
-  <link rel="stylesheet" href="stylesheet/stylesheet.css">
-  <!-- jquery -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="images/logo-img.png">
+    <!-- タイトル -->
+    <title>Noha Portfolio</title>
+  
+    <!-- css読み込み -->
+    <link rel="stylesheet" href="sass/reset.css">
+    <link rel="stylesheet" href="sass/style.css">
+  
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+  </head>
 <body>
-  <header>
-    <div class="header-nav">
+  <header class="header">
+    <div class="header__logo">
       <img src="images/logo-img.png">
-      <a href="index.html"><h1 class="logo">Noha Portfolio</h1></a>
+      <h1>Noha Portfolio</h1>
     </div>
-    <div class="menu">
+    <!-- .header__logo -->
+    <div class="header__menu">
       <div class="hamburger">
         <a class="nav-btn">
           <span></span>
@@ -30,34 +35,54 @@
           <span></span>
         </a>
       </div>
-      <div class="menu-content">
-        <div class="menu-content-inner">
+      <div class="header__menu__content" id="open-menu">
+        <nav class="menu__inner">
           <ul>
-            <li class="transition10 delay03"><a href="index.html">戻る</a></li>
-            <li class="transition10 delay05"><a id="website" href="#website-id">Web Site</a></li>
-            <li class="transition10 delay07"><a id="design" href="#design-id">Design</a></li>
+            <li class="transition10 delay03"><a id="about" href="#about-id">About Me</a></li>
+            <li class="transition10 delay05"><a id="skills" href="#skills-id">Skills</a></li>
+            <li class="transition10 delay07"><a id="works" href="#works-id">Works</a></li>
+            <li class="transition10 delay09"><a id="contact" href="#contact-id">Contact</a></li>
           </ul>
-        </div>
+        </nav>
+        <!-- .menu__inner -->
       </div>
+      <!-- .header__menu__content -->
     </div>
+    <!-- .header__menu -->
   </header>
+  
   <div class="side-ver">
-    <ul class="item">
-      <li>
+    <ul class="side-ver__inner">
+      <li class="side-ver__inner__item">
         <a href="https://qiita.com/NG-noha" target="_blank">
           <i class="fas fa-file-code fa-2x"></i>
           <p>Qiita</p>
         </a>
       </li>
-      <li><a href="https://github.com/yamanoha-hub"  target="_blank"><i class="fab fa-github fa-2x"></i><p>Git</p></a></li>
-      <li><a href="https://note.com/noha7593" target="_blank"><i class="far fa-file fa-2x"></i><p>Note</p></a></li>
+      <!-- .side-ver__inner__item -->
+      <li class="side-ver__inner__item">
+        <a href="https://github.com/yamanoha-hub"  target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+          <p>Git</p>
+        </a>
+      </li>
+      <!-- .side-ver__inner__item -->
+      <li class="side-ver__inner__item">
+        <a href="https://note.com/noha7593" target="_blank">
+          <i class="far fa-file fa-2x"></i>
+          <p>Note</p>
+        </a>
+      </li>
+      <!-- .side-ver__inner__item -->
     </ul>
+    <!-- .side-ver__inner -->
     <div id="page-top">
       <a href="#">
         <i class="fas fa-arrow-up"></i>
       </a>
     </div>
   </div>
+
   <main>
     <section class="works-visual"></section>
     <section class="pick-up" id="website-id">

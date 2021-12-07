@@ -14,8 +14,6 @@
   <title>Noha Portfolio</title>
 
   <!-- css読み込み -->
-  <!-- <link rel="stylesheet" href="stylesheet/reset.css"> -->
-  <!-- <link rel="stylesheet" href="stylesheet/stylesheet.css"> -->
   <link rel="stylesheet" href="sass/reset.css">
   <link rel="stylesheet" href="sass/style.css">
 
@@ -127,18 +125,19 @@
             <i class="far fa-file-code fa-6x"></i>
             <p>適切なコーディングを心掛け、jqueryを使ってよくあるアニメーションの実装も可能です。表示の崩れが無いようレスポンシブ化にも対応。また、デザインカンプ(AdobeXD)からコーディングすることができます。</p>
           </div>
+          <!-- .card -->
           <div class="card">
             <h3>Photoshop,<br>Illustrator, XD</h3>
             <i class="fas fa-pen-fancy fa-6x"></i>
             <p>adobeチュートリアル動画やデザインのドリルのトレースで学習を行い基本的な使い方は使用できます。</p>
             <p>アウトプットはnoteにて詳しく記事にしております。</p>
           </div>
+          <!-- .card -->
           <div class="card">
             <h3>Git/GitHub,<br>Firebase(ホスティング)</h3>
             <i class="fab fa-github fa-2x"></i>
             <i class="fas fa-fire fa-2x"></i>
             <p>git学習後に今まで学習してきたサイトを載せました。右のサイドバーから確認できます。</p>
-
             <h3 class="strengthen">※強化中</h3>
             <ul>
               <li>WordPress(PHP)</li>
@@ -146,87 +145,91 @@
               <li>JavaScript</li>
             </ul>
           </div>
+          <!-- .card -->
         </div>
         <!-- .skill-content -->
       </div>
     </section>
     <!-- .skills -->
 
-    <section class="works sticky" id="works-id">
+    <section class="work" id="works-id">
       <div class="wrapper">
         <div class="sticky">
           <h2 class="section-title">Works</h2>
-          <div class="site-contents">
-            <div class="work-site6">
+          <div class="work__contents">
+            <div class="work__contents__site">
               <a href="works.html">
                 <img src="images/site05.png" alt="架空クリニックサイト">
               </a>
             </div>
-            <div class="work-site5">
+            <div class="work__contents__site">
               <a href="#site5">
                 <img src="images/portfolio.png" alt="自作サイト(ポートフォリオ)">
               </a>
             </div>
-            <div class="work-site4">
+            <div class="work__contents__site">
               <a href="#site4">
                 <img src="images/site04.png" alt="フィットネス系サイト">
               </a>
             </div>
-            <div class="work-site3">
+            <div class="work__contents__site">
               <a href="#site3">
                 <img src="images/site03.png" alt="コーポレート系サイト(架空)">
               </a>
             </div>
-            <div class="work-site2">
+            <div class="work__contents__site">
               <a class="#site2">
                 <img src="images/site02.png" alt="美容系ランディングページ">
               </a>
             </div>
-            <div class="work-site1">
+            <div class="work__contents__site">
               <a href="#site1">
                 <img src="images/site01.png" alt="リゾートホテルサイト">
               </a>
             </div>
           </div>
+          <!-- .work__contents -->
           <div class="view">
-            <a href="works.html">MORE
-              <i class="fas fa-angle-double-right"></i>
+            <a href="works.html">MORE<i class="fas fa-angle-double-right"></i>
             </a>
           </div>
+          <!-- .view -->
         </div>
+        <!-- .sticky -->
       </div>
     </section>
     <!-- .works sticky -->
 
-    <section class="contact sticky" id="contact-id">
+    <!-- <div class="sticky"></div> -->
+    <section class="contact" id="contact-id">
       <div class="wrapper">
         <h2 class="section-title">Contact</h2>
         <form action="#" class="form">
-          <div id="form__name">
-            <span for="name">お名前</span>
+          <div class="form__name">
+            <h3>お名前</h3>
             <p class="alert">Alert : 未解答</p>
-            <input type="text" id="name" name="your-name">
+            <input type="text" id="name" placeholder=" 例：山田 太郎">
           </div>
           <!-- .name-area -->
-          <div id="furigana-area">
-              <span for="name">フリガナ</span>
-              <p class="alert">Alert : 未解答</p>
-              <input type="text" id="huri" name="your-huri">
+          <div class="form__furigana">
+            <h3>フリガナ</h3>
+            <p class="alert">Alert : 未解答</p>
+            <input type="text" id="huri" placeholder=" 例：ヤマダ タロウ">
           </div>
           <!-- .furigana-area -->
-          <div id="form__mail">
-              <span for="name">メールアドレス</span>
-              <p class="alert">Alert : 未解答</p>
-              <input type="email" id="email" name="your-email">
+          <div class="form__mail">
+            <h3>メールアドレス</h3>
+            <p class="alert">Alert : 未解答</p>
+            <input type="email" id="email" placeholder="例：Example@example.com">
           </div>
           <!-- .mail-area -->
-          <div id="form__message">
-            <span for="message">メッセージ</span>
+          <div class="form__message">
+            <h3>メッセージ</h3>
             <p class="alert">Alert : 未解答</p>
-            <textarea name="your-message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="your-message" id="message"></textarea>
           </div>
           <!-- .message-area -->
-          <input type="submit" class="contact-btn" value="送信"  id="submitBtn">
+          <input type="submit" value="送信" id="submitBtn">
         </form>
       </div>
     </section>
