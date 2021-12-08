@@ -58,7 +58,6 @@ main {
   border-radius: 20px;
   box-shadow: 0px 3px 5px 2px #858585;
 }
-
 .sticky {
   position: sticky;
   top: 60px;
@@ -76,7 +75,7 @@ main {
   font-size: 38px;
   line-height: 1;
   position: relative;
-  // margin-top: 30px;
+  z-index: 1;
   &::before {
     color: rgba(221, 222, 255, 0.3);
     font-size: 96px;
@@ -89,6 +88,7 @@ main {
     font-size: 24px;
     &::before {
       font-size: 56px;
+      top: 20px;
     }
   }
 }
@@ -101,6 +101,10 @@ main {
     text-align: center;
     &::first-letter {
       color: $bg-color;
+    }
+    @include media(s) {
+      padding: 15px;
+      font-size: 2rem;
     }
   }
 }
@@ -133,7 +137,6 @@ main {
     // }
   }
 }
-
 @mixin page-top {
   width: 50px;
   height: 50px;
@@ -154,7 +157,6 @@ main {
     }
   }
 }
-
 @mixin header__menu {
   width: 60px;
   height: calc(100vh - 120px);
@@ -170,7 +172,7 @@ main {
     left: 60px;
     background-color: #fff;
     z-index: -1;
-    .menu__inner ul { 
+    .menu__inner ul {
       width: 300px;
       height: calc(100vh - 120px);
       display: flex;
@@ -188,11 +190,35 @@ main {
       transform: translateY(0px);
     }
   }
-  // @include media(s) {
-    // position: none;
-  // }
+  @include media(s) {
+    height: auto;
+    &__content {
+      width: 70%;
+      height: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      .menu__inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul {
+          height: 100%;
+          background-color: #fff;
+        }
+      }
+    }
+  }
 }
-
 @mixin side-bar {
   width: 60px;
   height: calc(100vh - 120px);
@@ -211,9 +237,11 @@ main {
       text-align: center;
     }
   }
-
   #page-top {
     @include page-top;
+  }
+  @include media(s) {
+    display: none;
   }
 }
 
