@@ -159,11 +159,6 @@
           <h2 class="section-title">Works</h2>
           <div class="work__contents">
             <div class="work__contents__site">
-              <a href="works.html">
-                <img src="images/site05.png" alt="架空クリニックサイト">
-              </a>
-            </div>
-            <div class="work__contents__site">
               <a href="#site5">
                 <img src="images/portfolio.png" alt="自作サイト(ポートフォリオ)">
               </a>
@@ -179,7 +174,7 @@
               </a>
             </div>
             <div class="work__contents__site">
-              <a class="#site2">
+              <a href="#site2">
                 <img src="images/site02.png" alt="美容系ランディングページ">
               </a>
             </div>
@@ -195,7 +190,6 @@
               <i class="fas fa-angle-double-right"></i>
             </a>
           </div>
-          <!-- /.view -->
           <!-- .view -->
         </div>
         <!-- .sticky -->
@@ -203,7 +197,6 @@
     </section>
     <!-- .works sticky -->
 
-    <!-- <div class="sticky"></div> -->
     <section class="contact" id="contact-id">
       <div class="wrapper">
         <h2 class="section-title">Contact</h2>
@@ -211,19 +204,19 @@
           <div class="form__name">
             <h3>お名前</h3>
             <p class="alert">Alert : 未解答</p>
-            <input type="text" id="name" placeholder=" 例：山田 太郎">
+            <input type="text" id="name" placeholder=" 例:山田 太郎">
           </div>
           <!-- .name-area -->
           <div class="form__furigana">
             <h3>フリガナ</h3>
             <p class="alert">Alert : 未解答</p>
-            <input type="text" id="huri" placeholder=" 例：ヤマダ タロウ">
+            <input type="text" id="huri" placeholder=" 例:ヤマダ タロウ">
           </div>
           <!-- .furigana-area -->
           <div class="form__mail">
             <h3>メールアドレス</h3>
             <p class="alert">Alert : 未解答</p>
-            <input type="email" id="email" placeholder="例：Example@example.com">
+            <input type="email" id="email" placeholder="例:Example@example.com">
           </div>
           <!-- .mail-area -->
           <div class="form__message">
@@ -238,33 +231,35 @@
     </section>
     <!-- .contact sticky -->
   </main>
-  <div class="modal-wrapper">
-    <div class="site5-modal" id="site5">
+  <div class="modal">
+    <div class="modal__site" id="site5">
       <div class="close-modal">
         <i class="fa fa-times fa-2x"></i>
       </div>
-      <div class="modal-left">
+      <div class="modal__site__img">
         <h2>ポートフォリオ</h2>
         <img src="images/portfolio.png" alt="自作サイト(ポートフォリオ)">
       </div>
-      <div class="modal-text">
+      <div class="modal__site__text">
         <h3>詳細</h3>
         <p>・コーディング,レスポンシブ,jQuery全て自分で作成しました。</p>
         <div class="parts">
-          <p><strong>実装/動き</strong><br>レスポンシブ化,font awesome,ページトップ,フォームのバリデーション,スムーズスクロール,モーダル</p>
+          <p><span>実装/動き</span><br>
+            レスポンシブ化,font awesome,ページトップ,フォームのバリデーション,スムーズスクロール,モーダル
+          </p>
+        </div>
         <a class="btn" href="https://github.com/yamanoha-hub/practice2" target="_blank">コードを確認する</a>
       </div>
-      </div>
     </div>
-    <div class="site4-modal" id="site4">
+    <div class="modal__site" id="site4">
       <div class="close-modal">
         <i class="fa fa-times fa-2x"></i>
       </div>
-      <div class="modal-left">
+      <div class="modal__site__img">
         <h2>フィットネス系サイト(架空)</h2>
         <img src="images/site04.png" alt="フィットネス系サイト">
       </div>
-      <div class="modal-text">
+      <div class="modal__site__text">
         <h3>詳細</h3>
         <p>・コーディング,レスポンシブ,jQueryでの動き</p>
         <p>・4ページ作成</p>
@@ -272,18 +267,18 @@
         <div class="parts">
           <p><strong>実装/動き</strong><br>レスポンシブ,ハンバーガーメニュー(クリックで全体に固定メニュー),ページトップ,BxSlider(プラグイン)でクリックしたらスライド,スムーズスクロール,font awesome,フォームのバリデーション</p>
         </div>
-        <a class="btn" href="https://github.com/yamanoha-hub/practice2" target="_blank">コードを確認する</a>
+          <a class="btn" href="https://github.com/yamanoha-hub/practice2" target="_blank">コードを確認する</a>
       </div>
     </div>
-    <div class="site3-modal" id="site3">
+    <div class="modal__site" id="site3">
       <div class="close-modal">
         <i class="fa fa-times fa-2x"></i>
       </div>
-      <div class="modal-left">
+      <div class="modal__site__img">
         <h2>コーポレート系サイト(架空)</h2>
-        <img src="images/site03.png" alt="フィットネス系サイト">
+        <img src="images/site03.png" alt="コーポレート系サイト(架空)">
       </div>
-      <div class="modal-text">
+      <div class="modal__site__text">
         <h3>詳細</h3>
         <p>・コーディング,レスポンシブ,jQueryでの動き</p>
         <p>・5ページ作成</p>
@@ -294,30 +289,30 @@
         <a class="btn" href="https://github.com/yamanoha-hub/practice1" target="_blank">コードを確認する</a>
       </div>
     </div>
-    <div class="site2-modal" id="site2">
+    <div class="modal__site" id="site2">
       <div class="close-modal">
         <i class="fa fa-times fa-2x"></i>
       </div>
-      <div class="modal-left">
-        <h2>デジハリハリウッド課題B(架空ランディングページ)</h2>
-        <img src="images/site02.png" alt="フィットネス系サイト">
+      <div class="modal__site__img">
+        <h2>デジハリハリウッド課題B<br>(架空ランディングページ)</h2>
+        <img src="images/site02.png" alt="美容系ランディングページ">
       </div>
-      <div class="modal-text">
+      <div class="modal__site__text">
         <h3>詳細</h3>
         <p>・コーディング,レスポンシブ,jQueryでの動き</p>
         <p>・HTML,CSS,jQueryを使用して作成。自分で考えてランディングページを作成しました。</p>
         <a class="btn" href="https://github.com/yamanoha-hub/kadaib_dzhr" target="_blank">コードを確認する</a>
       </div>
     </div>
-    <div class="site1-modal" id="site1">
+    <div class="modal__site" id="site1">
       <div class="close-modal">
         <i class="fa fa-times fa-2x"></i>
       </div>
-      <div class="modal-left">
-        <h2>デジハリハリウッド課題A(架空サイト)</h2>
-        <img src="images/site01.png" alt="site1-img">
+      <div class="modal__site__img">
+        <h2>デジハリハリウッド課題A<br>(架空サイト)</h2>
+        <img src="images/site01.png" alt="リゾートホテルサイト">
       </div>
-      <div class="modal-text">
+      <div class="modal__site__text">
         <h3>詳細</h3>
         <p>・コーディング,PC版のみ</p>
         <p>・2ページ作成(top画面、過ごし方)</p>

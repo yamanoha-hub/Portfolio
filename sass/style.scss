@@ -434,67 +434,123 @@
 /* Works */
 
 /* workモーダル */
-.modal-wrapper {
+.modal {
   display: none;
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
-}
-.close-modal {
-  position: absolute;
-  top: 70px;
-  right: 80px;
-  cursor: pointer;
-}
-.site1-modal,
-.site2-modal,
-.site3-modal,
-.site4-modal,
-.site5-modal {
-  min-height: 70%;
-  background-color: rgba(218, 218, 218, 0.8);
-  border-radius: 30px;
-  margin: 50px;
-  display: none;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  &__site {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    background-color: rgba(218, 218, 218, 0.8);
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 30px;
+
+    justify-content: space-around;
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      cursor: pointer;
+    }
+    &__img {
+      text-align: center;
+      font-size: 32px;
+      img {
+        width: 500px;
+      }
+    }
+    &__text {
+      width: 600px;
+      margin-top: 50px;
+      h3 {
+        font-size: 28px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .parts {
+        margin-top: 20px;
+        span {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+    }
+    @include media(m) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 750px;
+      &__img {
+        font-size: 26px;
+        img {
+          width: 300px;
+        }
+      }
+      &__text {
+        width: 100%;
+        margin-top: 0;
+        h3 {
+          font-size: 24px;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 16px;
+        }
+        .parts {
+          margin-top: 10px;
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    @include media(s) {
+      width: 300px;
+      padding: 10px;
+      .close-modal {
+        top: 10px;
+        right: 20px;
+      }
+      &__img {
+        font-size: 18px;
+        img {
+          width: 150px;
+        }
+      }
+      &__text {
+        line-height: 1.75;
+        h3 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+        }
+        .parts {
+          margin-top: 5px;
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }
-.modal-open {
+.modal__open {
   display: flex;
-}
-.modal-left {
-  text-align: center;
-  max-width: 50%;
-}
-.modal-wrapper img {
-  max-width: 60%;
-  margin: 10px;
-}
-.modal-text {
-  max-width: 40%;
-  margin: 20px;
-  line-height: 1.5;
-}
-.modal-text h3 {
-  font-size: 24px;
-  border-bottom: 1px solid #000;
-  margin-bottom: 20px;
-}
-
-.parts {
-  margin-top: 20px;
-}
-.parts strong {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.modal-text a {
-  margin-top: 50px;
 }
 /* workモーダル */
 
@@ -606,6 +662,9 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @include media(s) {
+    height: 150px
+  }
 }
 /* works.html */
 
@@ -734,25 +793,19 @@ footer {
       width: 80%;
     }
     &__text {
-      font-size: 24px;
-      a {
-        padding: 5px 50px;
-      }
+      font-size: 18px;
     }
     @include media(m) {
       margin-top: 30px;
       img {
         width: 100%;
       }
-      &__text {
-        font-size: 18px;
-      }
     }
     @include media(s) {
       &__text {
         font-size: 16px;
         a {
-          margin-top: 20px;
+          // margin-top: 20px;
         }
       }
     }

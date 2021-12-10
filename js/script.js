@@ -1,15 +1,15 @@
 $(function(){
-  // メニューホバー
-  $('.header__menu').hover (
-    function() {  //カーソル置いたら
-      $('.header__menu__content').fadeIn();
-      $('.header__menu__content').addClass('on');
-    },
-    function() {  //外したら
+  // メニュークリック
+  $('.header__menu').click(function() {
+    // もし.onがついていたら
+    if( $('.header__menu__content').hasClass('on') ) {
       $('.header__menu__content').fadeOut();
       $('.header__menu__content').removeClass('on');
+    } else {
+      $('.header__menu__content').fadeIn();
+      $('.header__menu__content').addClass('on');
     }
-  );
+  });
 
   // スムーススクロール
   $('.menu__inner a[href^="#"]').click(function() {
@@ -27,35 +27,31 @@ $(function(){
   });
 
   // モーダルオープン
-  $(".work-site5").click(function() {
-    $('.modal-wrapper').show();
-    $(".site5-modal").addClass("modal-open");
+  $(".work__contents__site").click(function() {
+    $('.modal').addClass('modal__open');
+    var IDhref = $(this).children('a').attr('href');
+
+    console.log(IDhref);
+
+    if(IDhref == '#site5') {
+      $('#site5').addClass('modal__open');
+    } else if(IDhref == '#site4') {
+      $('#site4').addClass('modal__open');
+    } else if(IDhref == '#site3') {
+      $('#site3').addClass('modal__open');
+    } else if(IDhref == '#site2') {
+      $('#site2').addClass('modal__open');
+    } else if(IDhref == '#site1') {
+      $('#site1').addClass('modal__open');
+    } else {
+      $('.modal').hide();
+      $('.modal').removeClass('modal__open');
+    }
   });
-  $(".work-site4").click(function() {
-    $('.modal-wrapper').show();
-    $(".site4-modal").addClass("modal-open");
-  });
-  $(".work-site3").click(function() {
-    $('.modal-wrapper').show();
-    $(".site3-modal").addClass("modal-open");
-  });
-  $(".work-site2").click(function() {
-    $('.modal-wrapper').show();
-    $(".site2-modal").addClass("modal-open");
-  });
-  $(".work-site1").click(function() {
-    $('.modal-wrapper').show();
-    $(".site1-modal").addClass("modal-open");
-  });
-  
   // モーダルクローズ
   $('.close-modal').click(function() {
-    $('.modal-wrapper').hide();
-    $(".site5-modal").removeClass("modal-open");
-    $(".site4-modal").removeClass("modal-open");
-    $(".site3-modal").removeClass("modal-open");
-    $(".site2-modal").removeClass("modal-open");
-    $(".site1-modal").removeClass("modal-open");
+    $('.modal').removeClass('modal__open');
+    $('.modal').children('.modal__site').removeClass('modal__open');
   });
 
   // バリデーション
