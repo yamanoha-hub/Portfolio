@@ -2,9 +2,9 @@
 
 
 // 表示崩れ見るため
-* {
-  outline: 2px solid blue;
-}
+// * {
+//   outline: 2px solid blue;
+// }
 
 .open-menu {
   display: block;
@@ -385,6 +385,18 @@
       margin-left: 5px;
     }
   }
+  @include media(l) {
+    &__contents {
+      max-width: 900px;
+      &__site {
+        width: 230px;
+        img {
+          max-width: 230px;
+          height: 170px;
+        }
+      }
+    }
+  }
   @include media(m) {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -400,8 +412,6 @@
     }
   }
   @include media(s) {
-    padding-top: 70px;
-    padding-bottom: 70px;
     &__contents {
       max-width: 750px;
       &__site {
@@ -588,6 +598,7 @@ footer {
 /* フッター */
 
 
+
 /* works.html */
 .works-visual {
   height: 300px;
@@ -597,7 +608,6 @@ footer {
   background-position: center;
 }
 /* works.html */
-
 
 /* website */
 .pick-up {
@@ -618,7 +628,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include media(m) {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
   }
+
   &__card {
     display: flex;
     margin-bottom: 100px;
@@ -638,9 +655,6 @@ footer {
         border-bottom: 1px solid #000;
         margin-bottom: 20px;
       }
-      h5 {
-        font-size: 18px;
-      }
     }
     &:nth-child(even) {      
       display: flex;
@@ -650,14 +664,49 @@ footer {
         margin-right: 30px;
       }
     }
+    @include media(m) {
+      flex-direction: column;
+
+      &__img {
+        margin-bottom: 30px;
+      }
+      &__text {
+        margin-left: 0;
+      }
+      &:nth-child(even) {      
+        flex-direction: column;
+        .pick-up__card__text {
+          margin-right: 0;
+        }
+      }
+    }
+    @include media(s) {
+      margin-bottom: 30px;
+      &__img {
+        p {
+          font-size: 16px;
+        }
+      }
+      &__text {
+        h4 {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+      &:nth-child(even) {      
+        flex-direction: column;
+        .pick-up__card__text {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 /* website */
 
-
-
 // .others-site
 .others-site {
+  padding-top: 30px;
   @include sub-ttl;
   .sub-title {
     color: $font-Color;
@@ -668,7 +717,6 @@ footer {
   }
 }
 // .others-site
-
 
 /* design */
 .design {
@@ -711,8 +759,5 @@ footer {
   }
 }
 /* design */
-
-
-
 
 

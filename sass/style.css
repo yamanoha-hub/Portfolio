@@ -80,10 +80,6 @@ main {
           transition-delay: .9s;
 }
 
-* {
-  outline: 2px solid blue;
-}
-
 .open-menu {
   display: block;
 }
@@ -822,6 +818,19 @@ main {
   margin-left: 5px;
 }
 
+@media screen and (max-width: 1600px) {
+  .work__contents {
+    max-width: 900px;
+  }
+  .work__contents__site {
+    width: 230px;
+  }
+  .work__contents__site img {
+    max-width: 230px;
+    height: 170px;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .work {
     padding-top: 70px;
@@ -840,10 +849,6 @@ main {
 }
 
 @media screen and (max-width: 599px) {
-  .work {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
   .work__contents {
     max-width: 750px;
   }
@@ -1167,6 +1172,15 @@ footer {
           align-items: center;
 }
 
+@media screen and (max-width: 1280px) {
+  .pick-up__contents {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 .pick-up__card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1195,10 +1209,6 @@ footer {
   margin-bottom: 20px;
 }
 
-.pick-up__card__text h5 {
-  font-size: 18px;
-}
-
 .pick-up__card:nth-child(even) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1214,7 +1224,57 @@ footer {
   margin-right: 30px;
 }
 
+@media screen and (max-width: 1280px) {
+  .pick-up__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pick-up__card__img {
+    margin-bottom: 30px;
+  }
+  .pick-up__card__text {
+    margin-left: 0;
+  }
+  .pick-up__card:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pick-up__card:nth-child(even) .pick-up__card__text {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .pick-up__card {
+    margin-bottom: 30px;
+  }
+  .pick-up__card__img p {
+    font-size: 16px;
+  }
+  .pick-up__card__text h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .pick-up__card:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pick-up__card:nth-child(even) .pick-up__card__text {
+    margin-right: 0;
+  }
+}
+
 /* website */
+.others-site {
+  padding-top: 30px;
+}
+
 .others-site .sub-title {
   padding: 30px;
   margin-bottom: 30px;
