@@ -1,14 +1,10 @@
-@import "_base";
-
+@import "_mixin";
 
 // 表示崩れ見るため
 // * {
 //   outline: 2px solid blue;
 // }
 
-.open-menu {
-  display: block;
-}
 
 // ヘッダー
 .header {
@@ -225,6 +221,7 @@
   padding-top: 30px;
   position: relative;
   padding-bottom: 50px;
+  overflow: hidden;
   @include media(s) {
     padding-top: 10px;
     padding-bottom: 0;
@@ -232,20 +229,15 @@
   &::before {
     content: "";
     background-color: #89d0ff;
-    height: 150%;
+    height: 120%;
     width: 40%;
     position: absolute;
     top: -10%;
+    top: 0;
     left: 55%;
-      transform-origin: left top;  /* X軸の位置 Y軸の位置 */
-      transform: skewX(-30deg);  /* 回転 */
+    transform-origin: left top;  /* X軸の位置 Y軸の位置 */
+    transform: skewX(-30deg);  /* 回転 */
     z-index: -10;
-    @include media(m) {
-      width: 50%;
-      height: 60%;
-      top: 0%;
-      left: 30%;
-    }
   }
   .section-title {
     @include section-ttl;
